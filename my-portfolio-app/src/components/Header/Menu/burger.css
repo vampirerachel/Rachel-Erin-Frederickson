@@ -1,0 +1,11 @@
+.menu-icon {
+  cursor: pointer;
+  font-size: 2em;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.menu-icon:hover {
+  transform: scale(1.2);
+  transition: transform 0.35s ease-in;
+  color: #e91e63;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}/*# sourceMappingURL=burger.css.map */

@@ -17,8 +17,8 @@ $nav-text-color: black;
     flex-direction: column; // Adjusted to column
     align-items: center;
     justify-content: center;
-    height: 40vh;
-    width: 100%;
+    height: 20vh;
+        width: 100%;
 }
 
 .layered-box {
@@ -164,71 +164,14 @@ $nav-text-color: black;
     .content-box {
         font-size: 2.8em;
         width: 100%;
+        
+    }
+    .header-container{
+        height: 40vh;
     }
 }
 
-.menu-items {
-    position: absolute;
-    bottom: 20px; // Adjusted bottom position
-    left: 20px;
-    width: 100%;
-    background-color: $base-color;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 60px;
 
-    a {
-        text-decoration: none;
-        color: white;
-        font-size: 1.5em;
-        margin-bottom: 20px;
-    }
-}
 
-.layered-box.menu-open {
-    transform: translateY(100%);
-    transition: transform 0.3s ease-in-out;
-}
 
-.menu-icon {
-    cursor: pointer;
 
-    top: 20px;
-    left: 20px;
-    z-index: 12;
-    font-size: 2em;
-    transition: font-size 0.3s ease-in-out;
-
-    &:hover {
-        font-size: 2.2em;
-        color: $hover-color; // Add your preferred hover color
-    }
-}
-
-.menu-items {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 300px; // Adjust the width as needed
-    background-color: $nav-background-color;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 60px;
-    transform: translateX(100%); // Initially hide the menu off-screen
-    transition: transform 0.3s ease-in-out;
-
-    a {
-        text-decoration: none;
-        color: $nav-text-color;
-        font-size: 1.5em;
-        margin-bottom: 20px;
-    }
-}
-
-.layered-box.menu-open {
-    transform: translateX(300px); // Adjust the width as needed
-    transition: transform 0.3s ease-in-out;
-}

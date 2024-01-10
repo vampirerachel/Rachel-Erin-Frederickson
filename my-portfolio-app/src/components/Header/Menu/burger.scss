@@ -1,0 +1,15 @@
+$hover-color: #e91e63;
+
+.menu-icon {
+    cursor: pointer;
+    font-size: 2em;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.2); // Increase size on hover
+        
+        transition: transform .35s ease-in;
+        color: $hover-color; // Change color on hover
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); // Add shadow on hover
+    }
+}

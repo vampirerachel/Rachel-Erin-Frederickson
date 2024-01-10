@@ -1,15 +1,9 @@
-import { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
-import '../Header/header.scss'
+
+import Burger from "../Header/Menu/Burger"
+import '../Header/banner.scss'
 
 const Header = () => {
-    const [isMenuOpen, setMenuOpen] = useState(false)
 
-const toggleMenu=()=> {
-    setMenuOpen( !isMenuOpen);
-}
-    
   return (
       <header className="header-container">
       <div className="layered-box">
@@ -25,8 +19,6 @@ const toggleMenu=()=> {
         <div className="tenth-layer"></div>
         <div className="content-box">Rachel Erin Frederickson</div>
           </div>
-          <div className='menu-icon' onClick={toggleMenu}> <FontAwesomeIcon icon={faBars} /></div>
-          <div className={`layered-box ${isMenuOpen ? 'menu-open' : ''}`}></div>
     </header>
   );
 }
