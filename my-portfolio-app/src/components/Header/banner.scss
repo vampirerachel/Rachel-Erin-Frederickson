@@ -17,7 +17,7 @@ $nav-text-color: black;
     flex-direction: column; // Adjusted to column
     align-items: center;
     justify-content: center;
-    height: 20vh;
+    height: 30vh;
         width: 100%;
 }
 
@@ -150,12 +150,15 @@ $nav-text-color: black;
     transform: translate(-50%, -50%);
     z-index: 11;
     width: 100%;
+    text-align: center; // Center the text horizontally
+    display: flex;
+    flex-direction: column;
+    align-items: center; // Center the text vertically
 
     &:hover {
         color: red;
         background-color: #4caf50;
     }
-
 }
 
 @media screen and (min-width: 768px) {

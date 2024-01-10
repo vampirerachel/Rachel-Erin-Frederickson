@@ -1,19 +1,17 @@
 // App.jsx
-
-import Navigation from './components/Header/Menu/Navigation';
-import Banner from './components/Header/Banner'
-import './App.css';
 import { useState } from 'react';
+import Header from './components/Header/Header';
 
 function App() {
   const [isMenuOpen, setMenuOpen] = useState(false);
+
   const toggleMenu = () => {
-    setMenuOpen(!isMenuOpen)
-  }
+    setMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className="App">
-      <Banner />
-      <Navigation isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
+      <Header toggleMenu={toggleMenu} />
     </div>
   );
 }

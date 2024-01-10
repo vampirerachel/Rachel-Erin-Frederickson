@@ -1,8 +1,7 @@
 
-import Burger from "../Header/Menu/Burger"
 import '../Header/banner.scss'
 
-const Header = () => {
+const Banner = () => {
 
   return (
       <header className="header-container">
@@ -17,10 +16,10 @@ const Header = () => {
         <div className="eighth-layer"></div>
         <div className="ninth-layer"></div>
         <div className="tenth-layer"></div>
-        <div className="content-box">Rachel Erin Frederickson</div>
+        <div className="content-box">Hello Im Rachel Erin Frederickson</div>
           </div>
     </header>
   );
 }
 
-export default Header;
+export default Banner;
