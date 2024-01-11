@@ -1,5 +1,5 @@
 
-import '../Header/banner.scss'
+import './banner.scss'
 
 const Banner = () => {
 

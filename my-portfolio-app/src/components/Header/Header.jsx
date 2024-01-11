@@ -2,14 +2,15 @@
 import Banner from './Banner';
 import Navigation from './Navigation';
 
-
-const Header = ({ toggleMenu }) => {
+const Header = () => {
   return (
     <>
       <Banner />
-      <Navigation toggleMenu={toggleMenu} />
+      <Navigation/>
     </>
   );
 };
+
+
 
 export default Header;

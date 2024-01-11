@@ -1,0 +1,32 @@
+$primaryColor: #4caf50;
+$secondaryColor: #45a049;
+
+.language-toggle {
+    position: relative;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+
+    &.active {
+        background-color: transparent;
+        color: black;
+        border: 2px solid white;
+        border-radius: 20px;
+        pointer-events: none;
+    }
+
+    &:not(.active) {
+        background-color: white;
+        color: black;
+        border: 2px solid $primaryColor;
+        border-radius: 20px;
+    }
+
+    &:hover:not(.active) {
+        background-color: $secondaryColor;
+        color: white;
+    }
+}

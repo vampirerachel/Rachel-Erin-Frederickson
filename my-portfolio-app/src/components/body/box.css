@@ -1,0 +1,229 @@
+.box-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  width: 100%;
+}
+
+.layered-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 10px;
+}
+
+.layered-box:hover .third-layer {
+  background-color: #e91e63;
+  width: 96%;
+  height: 80%;
+  position: absolute;
+  top: 10%;
+  left: 2%;
+  z-index: 3;
+}
+
+.layered-box:hover .fourth-layer {
+  background-color: #9c27b0;
+  width: 94%;
+  height: 70%;
+  position: absolute;
+  top: 15%;
+  left: 3%;
+  z-index: 4;
+}
+
+.layered-box:hover .fifth-layer {
+  background-color: #673ab7;
+  width: 92%;
+  height: 60%;
+  position: absolute;
+  top: 20%;
+  left: 4%;
+  z-index: 5;
+}
+
+.layered-box:hover .sixth-layer {
+  background-color: #3f51b5;
+  width: 90%;
+  height: 50%;
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  z-index: 6;
+}
+
+.layered-box:hover .seventh-layer {
+  background-color: #2196f3;
+  width: 88%;
+  height: 40%;
+  position: absolute;
+  top: 30%;
+  left: 6%;
+  z-index: 7;
+}
+
+.layered-box:hover .eighth-layer {
+  background-color: #03a9f4;
+  width: 86%;
+  height: 30%;
+  position: absolute;
+  top: 35%;
+  left: 7%;
+  z-index: 8;
+}
+
+.layered-box:hover .ninth-layer {
+  background-color: #00bcd4;
+  width: 84%;
+  height: 20%;
+  position: absolute;
+  top: 40%;
+  left: 8%;
+  z-index: 9;
+}
+
+.layered-box:hover .tenth-layer {
+  background-color: #ff9800;
+  width: 82%;
+  height: 10%;
+  position: absolute;
+  top: 45%;
+  left: 9%;
+  z-index: 10;
+}
+
+.layered-box:hover .base-layer {
+  background-color: #4caf50;
+}
+
+.base-layer {
+  background-color: #2196f3;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+.top-layer {
+  background-color: #4caf50;
+  width: 98%;
+  height: 90%;
+  position: absolute;
+  top: 5%;
+  left: 1%;
+  z-index: 2;
+}
+
+.third-layer {
+  background-color: #ff9800;
+  width: 96%;
+  height: 80%;
+  position: absolute;
+  top: 10%;
+  left: 2%;
+  z-index: 3;
+}
+
+.fourth-layer {
+  background-color: #e91e63;
+  width: 94%;
+  height: 70%;
+  position: absolute;
+  top: 15%;
+  left: 3%;
+  z-index: 4;
+}
+
+.fifth-layer {
+  background-color: #9c27b0;
+  width: 92%;
+  height: 60%;
+  position: absolute;
+  top: 20%;
+  left: 4%;
+  z-index: 5;
+}
+
+.sixth-layer {
+  background-color: #673ab7;
+  width: 90%;
+  height: 50%;
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  z-index: 6;
+}
+
+.seventh-layer {
+  background-color: #3f51b5;
+  width: 88%;
+  height: 40%;
+  position: absolute;
+  top: 30%;
+  left: 6%;
+  z-index: 7;
+}
+
+.eighth-layer {
+  background-color: #2196f3;
+  width: 86%;
+  height: 30%;
+  position: absolute;
+  top: 35%;
+  left: 7%;
+  z-index: 8;
+}
+
+.ninth-layer {
+  background-color: #03a9f4;
+  width: 84%;
+  height: 20%;
+  position: absolute;
+  top: 40%;
+  left: 8%;
+  z-index: 9;
+}
+
+.tenth-layer {
+  background-color: #00bcd4;
+  width: 82%;
+  height: 10%;
+  position: absolute;
+  top: 45%;
+  left: 9%;
+  z-index: 10;
+}
+
+.content-box {
+  color: black;
+  font-family: "Gluten", cursive;
+  font-size: 1.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-box:hover {
+  color: red;
+  background-color: #4caf50;
+}
+
+@media screen and (min-width: 768px) {
+  .content-box {
+    font-size: 2.8em;
+    width: 100%;
+  }
+  .box-container {
+    height: 40vh;
+  }
+}
+/*# sourceMappingURL=box.css.map */
