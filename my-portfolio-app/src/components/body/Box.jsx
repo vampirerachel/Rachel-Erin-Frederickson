@@ -1,8 +1,8 @@
-
+import {useTranslation} from 'react-i18next'
 import './box.scss'
 
 const Box = () => {
-
+const {t} = useTranslation();
   return (
       <div className="box-container">
       <div className="layered-box">
@@ -16,7 +16,7 @@ const Box = () => {
         <div className="eighth-layer"></div>
         <div className="ninth-layer"></div>
         <div className="tenth-layer"></div>
-        <div className="content-box"></div>
+        <div className="content-box"><p>{t ('box.1') }</p></div>
           </div>
           <div className="layered-box">
         <div className="base-layer"></div>
@@ -29,7 +29,7 @@ const Box = () => {
         <div className="eighth-layer"></div>
         <div className="ninth-layer"></div>
         <div className="tenth-layer"></div>
-        <div className="content-box"></div>
+        <div className="content-box"><p>{t('box.2') }</p></div>
         </div>
       </div>
       

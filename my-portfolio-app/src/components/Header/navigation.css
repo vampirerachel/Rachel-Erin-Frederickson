@@ -2,10 +2,12 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: -80px;
+  top: 10px;
   right: 0;
-  margin: 10px;
-  z-index: 1000;
+  margin: 11px;
+  z-index: 15;
+  top: -100px;
+  top: -247px;
 }
 
 .en {
@@ -17,10 +19,10 @@
 }
 
 .navigation-wrapper {
-  position: relative;
+  position: fixed;
   display: flex;
-  height: 80px;
-  z-index: 1000;
+  width: 100%;
+  z-index: 12;
 }
 
 .menu-icon {
@@ -44,11 +46,13 @@
   opacity: 0;
   transform: translateY(-20px);
   transition: transform 0.35s ease-in-out, opacity 0.35s ease-in-out;
+  z-index: 15;
+  /* Set a higher z-index for the navigation menu */
 }
 .navigation.open {
   opacity: 1;
   transform: translateY(0);
-  z-index: 1001;
+  background: radial-gradient(orange, transparent);
 }
 .navigation ul {
   list-style: none;
@@ -62,7 +66,7 @@
   padding: 10px;
   position: relative;
   display: flex;
-  max-width: 200x;
+  max-width: 200px;
   max-height: 200px;
 }
 .navigation ul li a {
@@ -83,12 +87,10 @@
   background: #333;
 }
 .navigation ul li .submenu {
-  /* Add this line */
   display: none;
   background-color: #1D90F5;
   border-radius: 0.3rem;
   box-shadow: 0 0 3px #000;
-  z-index: 1001;
 }
 .navigation ul li .submenu li {
   padding: 10px;
@@ -108,12 +110,18 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .submenu {
+    z-index: 15;
+  }
+  .navigation-wrapper {
+    top: auto;
+  }
   .navigation ul {
     flex-direction: row;
     /* Change to a horizontal layout on larger screens */
   }
   .navigation ul li a {
     height: 20px;
-    /* Remove fixed width for larger screens */
+    width: auto;
   }
 }/*# sourceMappingURL=navigation.css.map */
