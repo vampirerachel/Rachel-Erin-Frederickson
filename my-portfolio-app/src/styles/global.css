@@ -1,7 +1,5 @@
-:root {
-  overflow: hidden;
-}
-
 body {
+  margin-top: 30vh;
+  /* Adjust as needed based on the header height */
   overflow-y: auto;
 }/*# sourceMappingURL=global.css.map */

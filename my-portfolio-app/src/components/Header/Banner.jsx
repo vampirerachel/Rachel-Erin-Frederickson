@@ -1,24 +1,13 @@
 import { useTranslation } from 'react-i18next';
-import { useState, useEffect } from 'react';
+import { BannerProvider, useBanner } from './BannerContext.jsx';
+import PropTypes from 'prop-types';
+
 import './banner.scss';
 
 
 const Banner = () => {
   const { t } = useTranslation();
-  const [isBannerVisible, setBannerVisible] = useState(true);
-
-  const toggleBanner = () => {
-    setBannerVisible(!isBannerVisible);
-  };
-
-  const body = document.body 
-  useEffect(() => {
-    const scrollAmount = 30;
-    if (body) {
-      body.style.transition = 'transform 0.5s';
-body.style.transform = isBannerVisible ? 'translateY(0)' : `translateY(-${scrollAmount}%)`
-    }
-  },[isBannerVisible])
+  const { isBannerVisible, toggleBanner } = useBanner();
 
 
 
@@ -41,13 +30,13 @@ body.style.transform = isBannerVisible ? 'translateY(0)' : `translateY(-${scroll
           </div>
         </div>
       </header>
-      <button
-        onClick={toggleBanner}
-        className={`toggle-banner-button ${isBannerVisible ? '' : 'up'}`}
-      >
-      </button>
+      <button onClick={toggleBanner} className={`toggle-banner-button ${isBannerVisible ? '' : 'up'}`}></button>
     </div>
   );
 };
+
+BannerProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+}
 
 export default Banner;

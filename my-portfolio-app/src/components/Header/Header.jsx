@@ -1,16 +1,15 @@
 
-import Banner from './Banner';
-import Navigation from './Navigation';
+import Banner from "./Banner"
+import Navigation from "./Navigation";
 
 const Header = () => {
+
   return (
-    <>
+    <div>
       <Banner />
-      <Navigation/>
-    </>
+      <Navigation />
+    </div>
   );
 };
-
-
 
 export default Header;
