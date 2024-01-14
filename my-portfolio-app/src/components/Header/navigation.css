@@ -5,7 +5,7 @@
   top: -8px;
   right: 0;
   margin: 11px;
-  z-index: 17;
+  z-index: 1;
 }
 
 .en {
@@ -20,11 +20,12 @@
   position: fixed;
   display: flex;
   width: 100%;
-  z-index: 12;
+  z-index: 1;
 }
 
 .navigation-wrapper.banner-invisible {
   top: 0;
+  z-index: 1;
 }
 
 .menu-icon {
@@ -48,8 +49,7 @@
   opacity: 0;
   transform: translateY(-20px);
   transition: transform 0.35s ease-in-out, opacity 0.35s ease-in-out;
-  z-index: 15;
-  /* Set a higher z-index for the navigation menu */
+  z-index: 1;
 }
 .navigation.open {
   opacity: 1;
@@ -66,11 +66,14 @@
 }
 .navigation ul li {
   margin: 0;
-  padding: 10px;
+  padding: 20px;
   position: relative;
   display: flex;
   max-width: 200px;
   max-height: 200px;
+}
+.navigation ul li:hover .submenu {
+  display: block;
 }
 .navigation ul li a {
   color: #333;
@@ -84,10 +87,6 @@
   overflow: hidden;
   background: #1D90F5;
   transition: background 0.3s linear, color 0.3s linear;
-}
-.navigation ul li a:hover {
-  color: #fff;
-  background: #333;
 }
 .navigation ul li .submenu {
   display: none;
@@ -108,7 +107,17 @@
 .navigation ul li .submenu li a:hover {
   background: #333;
 }
-.navigation ul li:hover .submenu {
+.navigation ul li.has-submenu.open .submenu {
+  display: block;
+}
+
+.has-submenu {
+  z-index: 2;
+}
+.has-submenu.open {
+  z-index: 3;
+}
+.has-submenu.open .submenu {
   display: block;
 }
 
@@ -117,14 +126,13 @@
     position: fixed;
   }
   .submenu {
-    z-index: 15;
+    z-index: 1;
   }
   .navigation-wrapper {
     top: auto;
   }
   .navigation ul {
     flex-direction: row;
-    /* Change to a horizontal layout on larger screens */
   }
   .navigation ul li a {
     height: 20px;

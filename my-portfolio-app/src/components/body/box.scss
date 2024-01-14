@@ -24,7 +24,7 @@ display: flex;
     position: absolute;
     top: 10%;
     left: 2%;
-    z-index: 3;
+    z-index: -8;
 }
 
 .layered-box:hover .fourth-layer {
@@ -34,7 +34,7 @@ display: flex;
     position: absolute;
     top: 15%;
     left: 3%;
-    z-index: 4;
+    z-index: -7;
 }
 
 .layered-box:hover .fifth-layer {
@@ -44,7 +44,7 @@ display: flex;
     position: absolute;
     top: 20%;
     left: 4%;
-    z-index: 5;
+    z-index: -6;
 }
 
 .layered-box:hover .sixth-layer {
@@ -54,7 +54,7 @@ display: flex;
     position: absolute;
     top: 25%;
     left: 5%;
-    z-index: 6;
+    z-index: -5;
 }
 
 .layered-box:hover .seventh-layer {
@@ -64,7 +64,7 @@ display: flex;
     position: absolute;
     top: 30%;
     left: 6%;
-    z-index: 7;
+    z-index: -4;
 }
 
 .layered-box:hover .eighth-layer {
@@ -74,7 +74,7 @@ display: flex;
     position: absolute;
     top: 35%;
     left: 7%;
-    z-index: 8;
+    z-index: -3;
 }
 
 .layered-box:hover .ninth-layer {
@@ -84,7 +84,7 @@ display: flex;
     position: absolute;
     top: 40%;
     left: 8%;
-    z-index: 9;
+    z-index: -2;
 }
 
 .layered-box:hover .tenth-layer {
@@ -94,7 +94,7 @@ display: flex;
     position: absolute;
     top: 45%;
     left: 9%;
-    z-index: 10;
+    z-index: -1;
 }
 
 .layered-box:hover .base-layer {
@@ -106,7 +106,7 @@ display: flex;
     width: 100%;
     height: 100%;
     position: absolute;
-    z-index: 1;
+    z-index: -10;
 }
 
 .top-layer {
@@ -116,7 +116,7 @@ display: flex;
     position: absolute;
     top: 5%;
     left: 1%;
-    z-index: 2;
+    z-index: -9;
 }
 
 .third-layer {
@@ -126,7 +126,7 @@ display: flex;
     position: absolute;
     top: 10%;
     left: 2%;
-    z-index: 3;
+    z-index: -8;
 }
 
 .fourth-layer {
@@ -136,7 +136,7 @@ display: flex;
     position: absolute;
     top: 15%;
     left: 3%;
-    z-index: 4;
+    z-index: -7;
 }
 
 .fifth-layer {
@@ -146,7 +146,7 @@ display: flex;
     position: absolute;
     top: 20%;
     left: 4%;
-    z-index: 5;
+    z-index: -6;
 }
 
 .sixth-layer {
@@ -156,7 +156,7 @@ display: flex;
     position: absolute;
     top: 25%;
     left: 5%;
-    z-index: 6;
+    z-index: -5;
 }
 
 .seventh-layer {
@@ -166,7 +166,7 @@ display: flex;
     position: absolute;
     top: 30%;
     left: 6%;
-    z-index: 7;
+    z-index: -4;
 }
 
 .eighth-layer {
@@ -176,7 +176,7 @@ display: flex;
     position: absolute;
     top: 35%;
     left: 7%;
-    z-index: 8;
+    z-index: -3;
 }
 
 .ninth-layer {
@@ -186,7 +186,7 @@ display: flex;
     position: absolute;
     top: 40%;
     left: 8%;
-    z-index: 9;
+    z-index: -2;
 }
 
 .tenth-layer {
@@ -196,7 +196,7 @@ display: flex;
     position: absolute;
     top: 45%;
     left: 9%;
-    z-index: 10;
+    z-index: -1;
 }
 
 .content-box {
@@ -207,7 +207,7 @@ display: flex;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 11;
+    z-index: -1;
     max-width: 90%;
     text-align: center;
     display: flex;

@@ -2,4 +2,41 @@ body {
   margin-top: 30vh;
   /* Adjust as needed based on the header height */
   overflow-y: auto;
+}
+
+/* Custom scrollbar style for Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 12px;
+  /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2196f3;
+  /* Color of the thumb (the draggable part) */
+  border-radius: 6px;
+  /* Round the corners of the thumb */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  /* Color of the track (the non-draggable part) */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #0d47a1;
+  /* Change thumb color on hover */
+}
+
+/* Optional: Add scrollbar styles for Firefox */
+/* Firefox supports scrollbar styling using the scrollbar-color and scrollbar-width properties */
+body {
+  scrollbar-width: thin;
+  /* Set the width of the scrollbar in Firefox */
+  scrollbar-color: #2196f3 #f1f1f1;
+  /* Set the color of the thumb and track */
+}
+
+/* Optional: Customize scrollbar styles for Firefox on hover */
+body:hover {
+  scrollbar-color: #0d47a1 #f1f1f1;
 }/*# sourceMappingURL=global.css.map */

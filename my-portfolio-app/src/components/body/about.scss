@@ -1,0 +1,44 @@
+// about.scss
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+h2 {
+    text-align: center;
+    }
+    h3{
+    text-align: center;
+    }
+    
+}
+
+.about-section {
+    border: 2px solid #3498db; // Border color
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+   
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; // Adjust the gap between paragraphs
+}
+
+.sub-section {
+    border-bottom: 1px solid #3498db; // Border color between paragraphs
+    padding-bottom: 20px; // Adjust the padding as needed
+}
+
+h2,
+h3 {
+    color: #3498db; // Header text color
+}
+
+p {
+    color: #333; // Paragraph text color
+    line-height: 1.5;
+}

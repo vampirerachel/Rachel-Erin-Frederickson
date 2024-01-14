@@ -42,7 +42,7 @@ $nav-text-color: black;
 
 .layered-box:hover {
 
-    @mixin layer($color, $width, $height, $top, $left, $z-index) {
+@mixin layer($color, $width, $height, $top, $left, $z-index) {
         background-color: $color;
         width: $width;
         height: $height;
@@ -54,35 +54,35 @@ $nav-text-color: black;
 
     // Use the mixin to generate additional layers
     .third-layer {
-        @include layer($fourth-color, 96%, 80%, 10%, 2%, 3);
+        @include layer($fourth-color, 96%, 80%, 10%, 2%, -13);
     }
 
     .fourth-layer {
-        @include layer($fifth-color, 94%, 70%, 15%, 3%, 4);
+        @include layer($fifth-color, 94%, 70%, 15%, 3%, -14);
     }
 
     .fifth-layer {
-        @include layer($sixth-color, 92%, 60%, 20%, 4%, 5);
+        @include layer($sixth-color, 92%, 60%, 20%, 4%, -15);
     }
 
     .sixth-layer {
-        @include layer($seventh-color, 90%, 50%, 25%, 5%, 6);
+        @include layer($seventh-color, 90%, 50%, 25%, 5%, -16);
     }
 
     .seventh-layer {
-        @include layer($eighth-color, 88%, 40%, 30%, 6%, 7);
+        @include layer($eighth-color, 88%, 40%, 30%, 6%, -17);
     }
 
     .eighth-layer {
-        @include layer($ninth-color, 86%, 30%, 35%, 7%, 8);
+        @include layer($ninth-color, 86%, 30%, 35%, 7%, -18);
     }
 
     .ninth-layer {
-        @include layer($tenth-color, 84%, 20%, 40%, 8%, 9);
+        @include layer($tenth-color, 84%, 20%, 40%, 8%, -19);
     }
 
     .tenth-layer {
-        @include layer($third-color, 82%, 10%, 45%, 9%, 10);
+        @include layer($third-color, 82%, 10%, 45%, 9%, -20);
     }
 
     .base-layer {
@@ -95,7 +95,7 @@ $nav-text-color: black;
     width: 100%;
     height: 100%;
     position: absolute;
-    z-index: 1;
+    z-index: -11;
 transition: opacity 0.5s ease-in-out;
 }
 
@@ -106,7 +106,7 @@ transition: opacity 0.5s ease-in-out;
     position: absolute;
     top: 5%;
     left: 1%;
-    z-index: 2;transition: opacity 0.5s ease-in-out;
+    z-index: -12;transition: opacity 0.5s ease-in-out;
 }
 
 // Define a mixin to generate the layers
@@ -122,35 +122,35 @@ transition: opacity 0.5s ease-in-out;
 
 // Use the mixin to generate additional layers
 .third-layer {
-    @include layer($third-color, 96%, 80%, 10%, 2%, 3);
+    @include layer($third-color, 96%, 80%, 10%, 2%, -13);
 }
 
 .fourth-layer {
-    @include layer($fourth-color, 94%, 70%, 15%, 3%, 4);
+    @include layer($fourth-color, 94%, 70%, 15%, 3%, -14);
 }
 
 .fifth-layer {
-    @include layer($fifth-color, 92%, 60%, 20%, 4%, 5);
+    @include layer($fifth-color, 92%, 60%, 20%, 4%, -15);
 }
 
 .sixth-layer {
-    @include layer($sixth-color, 90%, 50%, 25%, 5%, 6);
+    @include layer($sixth-color, 90%, 50%, 25%, 5%, -16);
 }
 
 .seventh-layer {
-    @include layer($seventh-color, 88%, 40%, 30%, 6%, 7);
+    @include layer($seventh-color, 88%, 40%, 30%, 6%, -17);
 }
 
 .eighth-layer {
-    @include layer($eighth-color, 86%, 30%, 35%, 7%, 8);
+    @include layer($eighth-color, 86%, 30%, 35%, 7%, -18);
 }
 
 .ninth-layer {
-    @include layer($ninth-color, 84%, 20%, 40%, 8%, 9);
+    @include layer($ninth-color, 84%, 20%, 40%, 8%, -19);
 }
 
 .tenth-layer {
-    @include layer($tenth-color, 82%, 10%, 45%, 9%, 10);
+    @include layer($tenth-color, 82%, 10%, 45%, 9%, -20);
 }
 
 .content-box {
@@ -219,7 +219,7 @@ transition: opacity 0.5s ease-in-out;
     justify-content: center;
     transition: background-color 0.3s;
     position: fixed;
-    z-index: 15;
+    z-index: 1;
     margin-top:-45px;
 
 
@@ -234,14 +234,14 @@ transition: opacity 0.5s ease-in-out;
         border-width: 0 148px 31px 146px;
         border-color: transparent transparent pink transparent;
         transition: transform 0.3s;
-        z-index: 20;
+        z-index: 1;
 
     }
 &.up::before {
     transform: translateX(-50%) rotate(180deg);
     animation: collapseToTop 0.7s forwards;
     margin-top: 200px;
-    z-index: 1;
+    
     /* Adjusted z-index */
 }
 
@@ -249,7 +249,7 @@ transition: opacity 0.5s ease-in-out;
     transform: translateX(-50%);
     top: -31px;
     animation: collapseToTop 0.7s forwards;
-    z-index: 14;
+    
     /* Adjusted z-index */
 }
 

@@ -1,12 +1,12 @@
+// navigation.scss
 .lang {
     display: flex;
     flex-direction: column;
     position: fixed;
     top: -8px;
     right: 0;
-        margin: 11px;
-        z-index: 17;
-
+    margin: 11px;
+    z-index: 1;
 }
 
 .en {
@@ -21,12 +21,14 @@
     position: fixed;
     display: flex;
     width: 100%;
-    z-index: 12;
+    z-index: 1;
+}
 
+.navigation-wrapper.banner-invisible {
+    top: 0;
+    z-index: 1;
 }
-.navigation-wrapper.banner-invisible{
-    top:0;
-}
+
 .menu-icon {
     font-size: 32px;
     color: #333;
@@ -50,8 +52,7 @@
     opacity: 0;
     transform: translateY(-20px);
     transition: transform 0.35s ease-in-out, opacity 0.35s ease-in-out;
-    z-index: 15;
-    /* Set a higher z-index for the navigation menu */
+    z-index: 1;
 
     &.open {
         opacity: 1;
@@ -69,12 +70,16 @@
 
         li {
             margin: 0;
-            padding: 10px;
+            padding: 20px;
             position: relative;
             display: flex;
             max-width: 200px;
             max-height: 200px;
-
+&:hover {
+        .submenu {
+            display: block;
+        }
+    }
             a {
                 color: #333;
                 text-decoration: none;
@@ -88,10 +93,8 @@
                 background: #1D90F5;
                 transition: background 0.3s linear, color 0.3s linear;
 
-                &:hover {
-                    color: #fff;
-                    background: #333;
-                }
+                
+                
             }
 
             .submenu {
@@ -117,19 +120,34 @@
                 }
             }
 
-            &:hover .submenu {
+            &.has-submenu.open .submenu {
                 display: block;
             }
+
+            
+        }
+    }
+}
+
+.has-submenu {
+    z-index: 2;
+
+    &.open {
+        z-index: 3;
+
+        .submenu {
+            display: block;
         }
     }
 }
 
 @media only screen and (min-width: 768px) {
-    .lang{
-position: fixed;
+    .lang {
+        position: fixed;
     }
+
     .submenu {
-        z-index: 15;
+        z-index: 1;
     }
 
     .navigation-wrapper {
@@ -139,7 +157,6 @@ position: fixed;
     .navigation {
         ul {
             flex-direction: row;
-            /* Change to a horizontal layout on larger screens */
 
             li {
                 a {
