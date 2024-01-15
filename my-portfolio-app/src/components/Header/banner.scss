@@ -1,16 +1,16 @@
-$base-color: #2196f3;
-$second-color: #4caf50;
-$third-color: #ff9800;
-$fourth-color: #e91e63;
-$fifth-color: #9c27b0;
-$sixth-color: #673ab7;
-$seventh-color: #3f51b5;
-$eighth-color: #2196f3;
-$ninth-color: #03a9f4;
-$tenth-color: #00bcd4;
-$hover-color: #ff5722;
-$nav-background-color: pink;
-$nav-text-color: black;
+$base-color: #2e1f1f;
+$second-color: #39404a;
+$third-color: #706b6b;
+$fourth-color: #394f5a;
+$fifth-color: #e1dcdc; // Light Beige
+$sixth-color: #d2d2d2; // Light Grey
+$seventh-color: #e7c9c9; // Light Dusty Rose
+$eighth-color: #9e7f7f; // Darker Brownish Maroon
+$ninth-color: #b9a099; // Dark Beige
+$tenth-color: #c5c1c1; // Light Grey
+$hover-color: #ad9384; // Light Dark Beige
+$nav-background-color: #b59797; // Light Dusty Rose
+$nav-text-color: #070707;
 @keyframes collapseToTop {
     from {
         top: 0;
@@ -29,7 +29,7 @@ $nav-text-color: black;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 30vh;
+    height: 15vh;
     width: 100%;
     transition: opacity 0.5s ease-in-out;
 }
@@ -54,35 +54,35 @@ $nav-text-color: black;
 
     // Use the mixin to generate additional layers
     .third-layer {
-        @include layer($fourth-color, 96%, 80%, 10%, 2%, -13);
+        @include layer($fourth-color, 96%, 80%, 10%, 2%, -9);
     }
 
     .fourth-layer {
-        @include layer($fifth-color, 94%, 70%, 15%, 3%, -14);
+        @include layer($fifth-color, 94%, 70%, 15%, 3%, -8);
     }
 
     .fifth-layer {
-        @include layer($sixth-color, 92%, 60%, 20%, 4%, -15);
+        @include layer($sixth-color, 92%, 60%, 20%, 4%, -7);
     }
 
     .sixth-layer {
-        @include layer($seventh-color, 90%, 50%, 25%, 5%, -16);
+        @include layer($seventh-color, 90%, 50%, 25%, 5%, -6);
     }
 
     .seventh-layer {
-        @include layer($eighth-color, 88%, 40%, 30%, 6%, -17);
+        @include layer($eighth-color, 88%, 40%, 30%, 6%, -5);
     }
 
     .eighth-layer {
-        @include layer($ninth-color, 86%, 30%, 35%, 7%, -18);
+        @include layer($ninth-color, 86%, 30%, 35%, 7%, -4);
     }
 
     .ninth-layer {
-        @include layer($tenth-color, 84%, 20%, 40%, 8%, -19);
+        @include layer($tenth-color, 84%, 20%, 40%, 8%, -3);
     }
 
     .tenth-layer {
-        @include layer($third-color, 82%, 10%, 45%, 9%, -20);
+        @include layer($third-color, 82%, 10%, 45%, 9%, -2);
     }
 
     .base-layer {
@@ -106,7 +106,7 @@ transition: opacity 0.5s ease-in-out;
     position: absolute;
     top: 5%;
     left: 1%;
-    z-index: -12;transition: opacity 0.5s ease-in-out;
+    z-index: -10;transition: opacity 0.5s ease-in-out;
 }
 
 // Define a mixin to generate the layers
@@ -122,35 +122,35 @@ transition: opacity 0.5s ease-in-out;
 
 // Use the mixin to generate additional layers
 .third-layer {
-    @include layer($third-color, 96%, 80%, 10%, 2%, -13);
+    @include layer($third-color, 96%, 80%, 10%, 2%, -9);
 }
 
 .fourth-layer {
-    @include layer($fourth-color, 94%, 70%, 15%, 3%, -14);
+    @include layer($fourth-color, 94%, 70%, 15%, 3%, -8);
 }
 
 .fifth-layer {
-    @include layer($fifth-color, 92%, 60%, 20%, 4%, -15);
+    @include layer($fifth-color, 92%, 60%, 20%, 4%, -7);
 }
 
 .sixth-layer {
-    @include layer($sixth-color, 90%, 50%, 25%, 5%, -16);
+    @include layer($sixth-color, 90%, 50%, 25%, 5%, -6);
 }
 
 .seventh-layer {
-    @include layer($seventh-color, 88%, 40%, 30%, 6%, -17);
+    @include layer($seventh-color, 88%, 40%, 30%, 6%, -5);
 }
 
 .eighth-layer {
-    @include layer($eighth-color, 86%, 30%, 35%, 7%, -18);
+    @include layer($eighth-color, 86%, 30%, 35%, 7%, -4);
 }
 
 .ninth-layer {
-    @include layer($ninth-color, 84%, 20%, 40%, 8%, -19);
+    @include layer($ninth-color, 84%, 20%, 40%, 8%, -3);
 }
 
 .tenth-layer {
-    @include layer($tenth-color, 82%, 10%, 45%, 9%, -20);
+    @include layer($tenth-color, 82%, 10%, 45%, 9%, -2);
 }
 
 .content-box {
@@ -214,7 +214,7 @@ transition: opacity 0.5s ease-in-out;
     padding: 0;
 
     height: 40px;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s;

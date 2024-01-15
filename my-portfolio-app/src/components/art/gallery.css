@@ -1,0 +1,29 @@
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 20px;
+}
+.gallery-container .artwork-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.gallery-container .artwork-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px 8px 0 0;
+}
+.gallery-container .artwork-item .artwork-info {
+  padding: 15px;
+}
+.gallery-container .artwork-item .artwork-info h3 {
+  margin-bottom: 10px;
+}
+.gallery-container .artwork-item .artwork-info p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #555;
+}/*# sourceMappingURL=gallery.css.map */

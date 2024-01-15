@@ -1,48 +1,53 @@
-// navigation.scss
+:root {
+    --nav-text-color: #e7c9c9; // Light Dusty Rose
+    --hover-color: #9e7f7f;
+    --nav-background-color: #b59797;
+    --nav-submenu-background: rgb(232, 166, 166);
+}
+
 .lang {
     display: flex;
-    flex-direction: column;
     position: fixed;
-    top: -8px;
+    top: 28px;
     right: 0;
-    margin: 11px;
     z-index: 1;
 }
 
-.en {
-    display: flex;
-}
-
-.es {
-    display: flex;
-}
-
-.navigation-wrapper {
+.navigation-container {
     position: fixed;
     display: flex;
-    width: 100%;
     z-index: 1;
+    top: 0;
 }
 
-.navigation-wrapper.banner-invisible {
-    top: 0;
-    z-index: 1;
+.menu-icon-container {
+    cursor: pointer;
 }
 
 .menu-icon {
+    position: relative;
     font-size: 32px;
-    color: #333;
-    cursor: pointer;
+    color: var(--nav-text-color);
     padding: 10px;
     transition: font-size 0.3s, color 0.3s;
+    background-color: var(--nav-background-color);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    margin-top: 28px;
+    margin-left: auto;
 
     &:hover {
         font-size: 36px;
-        color: #1D90F5;
+        color: var(--hover-color);
     }
 
     &.open {
-        color: #1D90F5;
+        color: var(--hover-color);
     }
 }
 
@@ -57,7 +62,7 @@
     &.open {
         opacity: 1;
         transform: translateY(0);
-        background: radial-gradient(orange, transparent);
+        background: radial-gradient(black, transparent);
         margin-top: 35px;
     }
 
@@ -75,11 +80,18 @@
             display: flex;
             max-width: 200px;
             max-height: 200px;
-&:hover {
-        .submenu {
-            display: block;
-        }
-    }
+
+            &:hover {
+                .submenu {
+                    display: block;
+                }
+
+                a {
+                    background: var(--hover-color);
+                    color: white;
+                }
+            }
+
             a {
                 color: #333;
                 text-decoration: none;
@@ -90,16 +102,18 @@
                 border-radius: 8px;
                 position: relative;
                 overflow: hidden;
-                background: #1D90F5;
+                background: var(--nav-submenu-background);
                 transition: background 0.3s linear, color 0.3s linear;
 
-                
-                
+                &:hover {
+                    background: var(--hover-color);
+                    color: white;
+                }
             }
 
             .submenu {
                 display: none;
-                background-color: #1D90F5;
+                background-color: var(--nav-submenu-background);
                 border-radius: 0.3rem;
                 box-shadow: 0 0 3px #000;
 
@@ -123,8 +137,6 @@
             &.has-submenu.open .submenu {
                 display: block;
             }
-
-            
         }
     }
 }

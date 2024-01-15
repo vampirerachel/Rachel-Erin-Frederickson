@@ -1,50 +1,56 @@
-section {
-  margin-bottom: 100px;
+.contact-section {
+  margin-bottom: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: "Comic Sans MS", cursive;
-  /* Use a fun and playful font */
+  border: 2px solid #706b6b;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 600px;
+  background-color: #e7c9c9;
+}
+.contact-section h2 {
+  color: #394f5a;
 }
 
 form {
-  max-width: 400px;
-  width: 70%;
-  margin-top: 20px;
+  max-width: 550px;
+  width: 90%;
+  margin-top: 5px;
   padding: 20px;
-  background-color: #ffcccb;
-  /* Fun background color */
+  background-color: #e1dcdc;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-  /* Add a fun transformation animation */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
 form:hover {
   transform: scale(1.05);
   /* Scale up on hover */
 }
-
-label {
+form label {
   font-size: 1.5em;
   margin-bottom: 5px;
-  color: #ff6347;
-  /* Fun label color */
+  color: #39404a;
 }
-
-input,
-textarea {
-  width: 75%;
+form input,
+form textarea {
+  width: 80%;
   padding: 10px;
   margin-bottom: 10px;
-  border: 2px solid #ff6347;
+  border: 2px solid #e7c9c9;
   /* Fun border color */
   border-radius: 5px;
-  font-size: 1.2em;
+  font-size: 0.7em;
 }
-
-button {
-  background-color: #4caf50;
+form button {
+  background-color: #394f5a;
   /* Fun button color */
   color: #fff;
   padding: 12px;
@@ -55,8 +61,7 @@ button {
   transition: background-color 0.3s ease;
   /* Add a fun transition */
 }
-
-button:hover {
-  background-color: #45a049;
+form button:hover {
+  background-color: #ad9384;
   /* Darker color on hover */
 }/*# sourceMappingURL=contact.css.map */

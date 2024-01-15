@@ -1,63 +1,87 @@
 // contact.scss
-section {
-    margin-bottom: 100px;
+$base-color: #2e1f1f;
+$second-color: #39404a;
+$third-color: #706b6b;
+$fourth-color: #394f5a;
+$fifth-color: #e1dcdc; // Light Beige
+$sixth-color: #d2d2d2; // Light Grey
+$seventh-color: #e7c9c9; // Light Dusty Rose
+$eighth-color: #9e7f7f; // Darker Brownish Maroon
+$ninth-color: #b9a099; // Dark Beige
+$tenth-color: #c5c1c1; // Light Grey
+$hover-color: #ad9384; // Light Dark Beige
+$nav-background-color: #b59797; // Light Dusty Rose
+
+.contact-section {
+    margin-bottom: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: 'Comic Sans MS', cursive;
-    /* Use a fun and playful font */
+    border: 2px solid $third-color;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    background-color: $seventh-color;
+
+    h2 {
+        color: $fourth-color; // Darker Brownish Maroon for good contrast
+    }
 }
 
 form {
-    max-width: 400px;
-    width: 70%;
-    margin-top: 20px;
+    max-width: 550px;
+    width: 90%;
+    margin-top: 5px;
     padding: 20px;
-    background-color: #ffcccb;
-    /* Fun background color */
+    background-color: $fifth-color;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    /* Add a fun transformation animation */
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-form:hover {
-    transform: scale(1.05);
-    /* Scale up on hover */
-}
+    &:hover {
+        transform: scale(1.05);
+        /* Scale up on hover */
+    }
 
-label {
-    font-size: 1.5em;
-    margin-bottom: 5px;
-    color: #ff6347;
-    /* Fun label color */
-}
+    label {
+        font-size: 1.5em;
+        margin-bottom: 5px;
+        color: $second-color; // Light Dusty Rose for good contrast
+    }
 
-input,
-textarea {
-    width: 75%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 2px solid #ff6347;
-    /* Fun border color */
-    border-radius: 5px;
-    font-size: 1.2em;
-}
+    input,
+    textarea {
+        width: 80%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 2px solid $seventh-color;
+        /* Fun border color */
+        border-radius: 5px;
+        font-size: 0.7em;
+    }
 
-button {
-    background-color: #4caf50;
-    /* Fun button color */
-    color: #fff;
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.2em;
-    transition: background-color 0.3s ease;
-    /* Add a fun transition */
-}
+    button {
+        background-color: $fourth-color;
+        /* Fun button color */
+        color: #fff;
+        padding: 12px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.2em;
+        transition: background-color 0.3s ease;
+        /* Add a fun transition */
+    }
 
-button:hover {
-    background-color: #45a049;
-    /* Darker color on hover */
+    button:hover {
+        background-color: $hover-color;
+        /* Darker color on hover */
+    }
 }

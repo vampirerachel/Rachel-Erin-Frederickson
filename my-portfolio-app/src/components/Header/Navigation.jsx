@@ -1,22 +1,13 @@
 // Navigation.jsx
 import Toggle from '../buttons/toggle';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-import { useTranslation } from "react-i18next";
-import { useBanner } from './BannerContext';
+import { useTranslation } from 'react-i18next';
 
 import './navigation.scss';
 
 const Navigation = () => {
-  const { isBannerVisible } = useBanner();
-  useEffect(() => {
-    document.body.style.marginTop = isBannerVisible ? '30vh' : '0';
-    return () => {
-      document.body.style.marginTop = '0'; // Reset margin on component unmount
-    };
-  }, [isBannerVisible]);
-
   const { t, i18n } = useTranslation();
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [activeLanguage, setActiveLanguage] = useState('en');
@@ -27,6 +18,12 @@ const Navigation = () => {
     setSubMenuOpen(false); // Close submenu when toggling the main menu
   };
 
+  const toggleLanguage = () => {
+    const newLanguage = activeLanguage === 'en' ? 'es' : 'en';
+    i18n.changeLanguage(newLanguage);
+    setActiveLanguage(newLanguage);
+  };
+
   const toggleSubMenu = () => {
     setSubMenuOpen(!isSubMenuOpen);
   };
@@ -35,15 +32,12 @@ const Navigation = () => {
     setSubMenuOpen(true);
   };
 
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-    setActiveLanguage(lng);
-  };
-
   return (
-    <div className={`navigation-wrapper ${isMenuOpen ? 'menu-open' : ''} ${isBannerVisible ? 'banner-visible' : 'banner-invisible'}`}>
-      <div className={`menu-icon ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenuHandler}>
-        <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
+    <div className={`navigation-container ${isMenuOpen ? 'menu-open' : ''}`}>
+      <div className="menu-icon-container" onClick={toggleMenuHandler}>
+        <div className="menu-icon">
+          <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
+        </div>
       </div>
       <nav className={`navigation ${isMenuOpen ? 'open' : ''}`}>
         <ul>
@@ -65,9 +59,8 @@ const Navigation = () => {
           </li>
         </ul>
       </nav>
-      <div className={`lang ${isBannerVisible ? 'banner-visible' : 'banner-invisible'}`}>
-        <Toggle className='en' toggleLanguage={() => changeLanguage('en')} langLabel='English' isActive={activeLanguage === 'en'}></Toggle>
-        <Toggle classname='es' toggleLanguage={() => changeLanguage('es')} langLabel='Español' isActive={activeLanguage === 'es'}></Toggle>
+      <div className="lang">
+        <Toggle toggleLanguage={toggleLanguage} langLabel={activeLanguage === 'en' ? 'Español' : 'English'} />
       </div>
     </div>
   );

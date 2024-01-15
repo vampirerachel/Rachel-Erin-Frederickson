@@ -1,26 +1,31 @@
 .language-toggle {
   position: relative;
   border: none;
-  padding: 5px 10px;
-  font-size: 16px;
+  padding: 10px;
+  font-size: 10px;
   cursor: pointer;
   outline: none;
-  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 }
 .language-toggle.active {
   background-color: transparent;
   color: black;
-  border: 2px solid white;
+  border: 2px solid grey;
   border-radius: 20px;
   pointer-events: none;
 }
 .language-toggle:not(.active) {
-  background-color: white;
-  color: black;
-  border: 2px solid #4caf50;
-  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #39404a;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
 }
 .language-toggle:hover:not(.active) {
-  background-color: #45a049;
-  color: white;
+  background-color: #9e7f7f;
+  color: #39404a;
 }/*# sourceMappingURL=toggle.css.map */

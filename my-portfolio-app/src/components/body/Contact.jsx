@@ -15,60 +15,67 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
- const handleSubmit = async (e) => {
-  e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  try {
-    const response = await axios.post('http://localhost:3001/submitForm', formData);
+    try {
+      const response = await fetch('http://localhost:3001/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    console.log('Form submitted successfully:', response.data);
-
-    setFormData({
-      name: '',
-      email: '',
-      message: '',
-    });
-  } catch (error) {
-    console.error('Error submitting form:', error);
-  }
-};
-
+      if (response.ok) {
+        console.log('Email sent successfully');
+        // You can add further logic here (e.g., show a success message to the user)
+      } else {
+        console.error('Failed to send email');
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+    }
+  };
 
   return (
     <div>
-      <section>
-        <h2>{t('Contact me')}</h2>
+      <section className='contact-section'>
+        <h2>{t('contact.title')}</h2>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="name">{t('Name')}</label>
+          <label htmlFor="name">{t('contact.name')}</label>
           <input
             type="text"
             id="name"
             name="name"
             value={formData.name}
             onChange={handleChange}
+            placeholder={t("placeholder.name")}
             required
           />
 
-          <label htmlFor="email">{t('Email Me')}</label> {/* Update the label here */}
+          <label htmlFor="email">{t('contact.email')}</label>
           <input
             type="email"
             id="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
+            placeholder={t("placeholder.email")}
             required
           />
 
-          <label htmlFor="message">{t('Message')}</label>
+          <label htmlFor="message">{t('contact.message')}</label>
           <textarea
             id="message"
             name="message"
             value={formData.message}
             onChange={handleChange}
+            placeholder={t("placeholder.message")}
             required
           ></textarea>
 
-          <button type="submit">{t('Send Message')}</button>
+          <button type="submit">{t('contact.send')}</button>
         </form>
       </section>
     </div>

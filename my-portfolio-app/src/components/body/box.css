@@ -3,206 +3,244 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 700px;
-  width: 80%;
-  margin-top: 65px;
+  height: 300px;
+  width: 90%;
+  margin-top: 150px;
+  margin-bottom: 60px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.layered-box {
+.box-layered-box {
   position: relative;
   width: 100%;
   height: 100%;
   margin-bottom: 10px;
+  display: flex;
 }
 
-.layered-box:hover .third-layer {
-  background-color: #e91e63;
+.box-layered-box:hover .box-third-layer {
+  background-color: #706b6b;
   width: 96%;
   height: 80%;
   position: absolute;
   top: 10%;
   left: 2%;
   z-index: -8;
+  transform: rotate(5deg);
+  /* Added rotation effect on hover */
 }
 
-.layered-box:hover .fourth-layer {
-  background-color: #9c27b0;
+.box-layered-box:hover .box-fourth-layer {
+  background-color: #394f5a;
   width: 94%;
   height: 70%;
   position: absolute;
   top: 15%;
   left: 3%;
   z-index: -7;
+  transform: rotate(-5deg);
+  /* Added rotation effect on hover */
 }
 
-.layered-box:hover .fifth-layer {
-  background-color: #673ab7;
+.box-layered-box:hover .box-fifth-layer {
+  background-color: #9e7f7f;
   width: 92%;
   height: 60%;
   position: absolute;
   top: 20%;
   left: 4%;
   z-index: -6;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  /* Added box shadow on hover */
 }
 
-.layered-box:hover .sixth-layer {
-  background-color: #3f51b5;
+.box-layered-box:hover .box-sixth-layer {
+  background-color: #b9a099;
   width: 90%;
   height: 50%;
   position: absolute;
   top: 25%;
   left: 5%;
   z-index: -5;
+  border: 2px solid #fff;
+  /* Added border on hover */
 }
 
-.layered-box:hover .seventh-layer {
-  background-color: #2196f3;
+.box-layered-box:hover .box-seventh-layer {
+  background-color: #e7c9c9;
   width: 88%;
   height: 40%;
   position: absolute;
   top: 30%;
   left: 6%;
   z-index: -4;
+  border-radius: 50%;
+  /* Added border-radius on hover */
 }
 
-.layered-box:hover .eighth-layer {
-  background-color: #03a9f4;
+.box-layered-box:hover .box-eighth-layer {
+  background-color: #e1dcdc;
   width: 86%;
   height: 30%;
   position: absolute;
   top: 35%;
   left: 7%;
   z-index: -3;
+  opacity: 0.8;
+  /* Added opacity on hover */
 }
 
-.layered-box:hover .ninth-layer {
-  background-color: #00bcd4;
+.box-layered-box:hover .box-ninth-layer {
+  background-color: #d2d2d2;
   width: 84%;
   height: 20%;
   position: absolute;
   top: 40%;
   left: 8%;
   z-index: -2;
+  transform: scale(1.2);
+  /* Added scaling effect on hover */
 }
 
-.layered-box:hover .tenth-layer {
-  background-color: #ff9800;
+.box-layered-box:hover .box-tenth-layer {
+  background-color: #c5c1c1;
   width: 82%;
   height: 10%;
   position: absolute;
   top: 45%;
   left: 9%;
   z-index: -1;
+  filter: brightness(1.2);
+  /* Added brightness effect on hover */
 }
 
-.layered-box:hover .base-layer {
-  background-color: #4caf50;
+.box-layered-box:hover .box-base-layer {
+  background-color: #ad9384;
 }
 
-.base-layer {
-  background-color: #2196f3;
+.box-base-layer {
+  background-color: #2e1f1f;
   width: 100%;
   height: 100%;
   position: absolute;
   z-index: -10;
+  transition: transform 0.3s ease;
+  /* Added transition on transform */
 }
 
-.top-layer {
-  background-color: #4caf50;
+.box-top-layer {
+  background-color: #ad9384;
   width: 98%;
   height: 90%;
   position: absolute;
   top: 5%;
   left: 1%;
   z-index: -9;
+  transition: transform 0.3s ease;
+  /* Added transition on transform */
 }
 
-.third-layer {
-  background-color: #ff9800;
+.box-third-layer {
+  background-color: #706b6b;
   width: 96%;
   height: 80%;
   position: absolute;
   top: 10%;
   left: 2%;
   z-index: -8;
+  transition: transform 0.3s ease;
+  /* Added transition on transform */
 }
 
-.fourth-layer {
-  background-color: #e91e63;
+.box-fourth-layer {
+  background-color: #394f5a;
   width: 94%;
   height: 70%;
   position: absolute;
   top: 15%;
   left: 3%;
   z-index: -7;
+  transition: transform 0.3s ease;
+  /* Added transition on transform */
 }
 
-.fifth-layer {
-  background-color: #9c27b0;
+.box-fifth-layer {
+  background-color: #9e7f7f;
   width: 92%;
   height: 60%;
   position: absolute;
   top: 20%;
   left: 4%;
   z-index: -6;
+  transition: box-shadow 0.3s ease;
+  /* Added transition on box-shadow */
 }
 
-.sixth-layer {
-  background-color: #673ab7;
+.box-sixth-layer {
+  background-color: #b9a099;
   width: 90%;
   height: 50%;
   position: absolute;
   top: 25%;
   left: 5%;
   z-index: -5;
+  transition: border 0.3s ease;
+  /* Added transition on border */
 }
 
-.seventh-layer {
-  background-color: #3f51b5;
+.box-seventh-layer {
+  background-color: #e7c9c9;
   width: 88%;
   height: 40%;
   position: absolute;
   top: 30%;
   left: 6%;
   z-index: -4;
+  transition: border-radius 0.3s ease;
+  /* Added transition on border-radius */
 }
 
-.eighth-layer {
-  background-color: #2196f3;
+.box-eighth-layer {
+  background-color: #e1dcdc;
   width: 86%;
   height: 30%;
   position: absolute;
   top: 35%;
   left: 7%;
   z-index: -3;
+  transition: opacity 0.3s ease;
+  /* Added transition on opacity */
 }
 
-.ninth-layer {
-  background-color: #03a9f4;
+.box-ninth-layer {
+  background-color: #d2d2d2;
   width: 84%;
   height: 20%;
   position: absolute;
   top: 40%;
   left: 8%;
   z-index: -2;
+  transition: transform 0.3s ease;
+  /* Added transition on transform */
 }
 
-.tenth-layer {
-  background-color: #00bcd4;
+.box-tenth-layer {
+  background-color: #c5c1c1;
   width: 82%;
   height: 10%;
   position: absolute;
   top: 45%;
   left: 9%;
   z-index: -1;
+  transition: filter 0.3s ease;
+  /* Added transition on filter */
 }
 
-.content-box {
+.box-content-box {
   color: black;
   font-family: "Gluten", cursive;
-  font-size: 1.5em;
+  font-size: 0.9em;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -213,16 +251,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+  /* Adding smooth transition */
 }
-
-.content-box:hover {
+.box-content-box:hover {
   color: red;
-  background-color: #4caf50;
+  background-color: #ad9384;
+  cursor: pointer;
+  transform: scale(1.1);
+  /* Adding scaling effect on hover */
+}
+.box-content-box:active {
+  transform: scale(0.9);
+  /* Adding scaling effect on click */
 }
 
 @media screen and (min-width: 768px) {
   .box-container {
-    margin-top: 70px;
+    margin-top: 250px;
   }
-}
-/*# sourceMappingURL=box.css.map */
+}/*# sourceMappingURL=box.css.map */
