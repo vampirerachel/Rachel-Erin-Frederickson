@@ -1,0 +1,27 @@
+/* portfolio.scss */
+
+.portfolio-container {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ecf0f1;
+    font-family: 'Arial', sans-serif;
+
+    .webbio {
+        margin-bottom: 20px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+    }
+}

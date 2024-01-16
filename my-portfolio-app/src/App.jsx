@@ -4,6 +4,7 @@ import { I18nextProvider } from 'react-i18next';
 import i18n from './config/i18n';
 import Home from './components/routes/home';
 import { BannerProvider } from './components/Header/BannerContext';
+import WebDev from './components/routes/WebDev';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/webdev" element={<WebDev />} />
           </Routes>
         </BrowserRouter>
       </BannerProvider>

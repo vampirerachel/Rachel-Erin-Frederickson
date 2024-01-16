@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { useTranslation } from 'react-i18next';
 
+
 import './navigation.scss';
 
 const Navigation = () => {
@@ -53,7 +54,7 @@ const Navigation = () => {
                 <a href="#">{t('nav.option1')}</a>
               </li>
               <li>
-                <a href="#">{t('nav.option2')}</a>
+                <a href="/webdev">{t('nav.option2')}</a>
               </li>
             </ul>
           </li>

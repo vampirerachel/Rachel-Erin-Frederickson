@@ -1,0 +1,37 @@
+/* VideoPlayer.scss */
+.vcontainer {
+  max-width: 80%;
+  margin: 0 auto;
+  /* Center the container horizontally */
+  padding: 20px;
+  background-color: #ecf0f1;
+  font-family: "Arial", sans-serif;
+  display: flex;
+  flex-direction: column;
+  /* Stack children vertically */
+  align-items: center;
+  /* Center children horizontally */
+  min-height: 100vh;
+  /* Ensure at least full viewport height */
+  margin-bottom: 300px;
+}
+.vcontainer .description {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.vcontainer .featureList {
+  list-style: none;
+  padding: 0;
+}
+.vcontainer .featureList li {
+  margin-bottom: 10px;
+}
+.vcontainer .featureList li strong {
+  color: #3498db;
+}
+.vcontainer .vimeoPlayer {
+  width: 400px;
+  height: 360px;
+  border: 0;
+  margin-top: 20px;
+}/*# sourceMappingURL=videoplayer.css.map */

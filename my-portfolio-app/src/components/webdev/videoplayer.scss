@@ -1,0 +1,47 @@
+/* VideoPlayer.scss */
+
+$vprimaryColor: #3498db;
+$vbackgroundColor: #ecf0f1;
+$vfontFamily: 'Arial', sans-serif;
+
+.vcontainer {
+    max-width: 80%;
+    margin: 0 auto;
+    /* Center the container horizontally */
+    padding: 20px;
+    background-color: $vbackgroundColor;
+    font-family: $vfontFamily;
+    display: flex;
+    flex-direction: column;
+    /* Stack children vertically */
+    align-items: center;
+    /* Center children horizontally */
+    min-height: 100vh;
+    /* Ensure at least full viewport height */
+    margin-bottom: 300px;
+
+    .description {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .featureList {
+        list-style: none;
+        padding: 0;
+
+        li {
+            margin-bottom: 10px;
+
+            strong {
+                color: $vprimaryColor;
+            }
+        }
+    }
+
+    .vimeoPlayer {
+        width: 400px;
+        height: 360px;
+        border: 0;
+        margin-top: 20px;
+    }
+}

@@ -3,6 +3,9 @@ body {
     /* Adjust as needed based on the header height */
     overflow-y: auto;
 }
+ul{
+    list-style: none;
+}
 /* Custom scrollbar style for Webkit browsers (Chrome, Safari) */
 ::-webkit-scrollbar {
     width: 12px;
