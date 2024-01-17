@@ -54,7 +54,7 @@ const Navigation = () => {
                 <a href="#">{t('nav.option1')}</a>
               </li>
               <li>
-                <a href="/webdev">{t('nav.option2')}</a>
+                <a href="/WebDev">{t('nav.option2')}</a>
               </li>
             </ul>
           </li>

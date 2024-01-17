@@ -1,46 +1,33 @@
-
+// Portfolio.jsx
+import Tecstack from '../buttons/tecstack';
 import Embeded from './Embeded';
-import './portfolio.scss'; 
+import './portfolio.scss';
 
 const Portfolio = () => {
-  return (
-    <div className="portfolio-container">
-      <p>
-        <a href="/">Go back</a>
-      </p>
-      <div className="webbio">
+    return (
+        <div className="portfolio-container">
+    <div >
+                <div className="row-one">
+    <Tecstack></Tecstack>
+    <div className="webbio">
         <h2>Bio</h2>
         <p>
-          Multifaceted, motivated Full Stack Developer with comprehensive training in fundamentals of both back-end and front-end UI’s. Accomplished artist who brings keen visual design mindset to all aspects of site development. People person with superior communications skills including active listening, effective questioning, and meaningful collaboration.
+        Coding since 2022, I&apos;m on a mission to tame the digital wild! A seasoned problem-solver, I leverage React to craft elegant styles and design user-friendly interfaces. Embracing innovative thinking, I utilize my artistic insight to enhance the aesthetics of the web. As an organized backend enthusiast with a passion for efficiency,I&apos;m ready to turn codes into a symphony! Let&apos;s make the internet awesome together!
         </p>
-      
-      <ul>
-        <h3>My Tech Stack</h3>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>Node.js</li>
-        <li>React</li>
-              </ul>
-      <ul>
-        <h3>Soft Skills</h3>
-        <li>Visionary Artistic Eye for Design</li>
-        <li>Persuasive and Empathetic Communicator</li>
-        <li>Reliable Leadership</li>
-        <li>Attentive and Intuitive Listener</li>
-              </ul>
-              </div>
-      <ul>
+    </div>
+                </div>
+                </div>
+    <ul>
         <h3>Projects</h3>
         <ul>
-          <li>
+        <li>
             <Embeded />
-          </li>
-          <li>Linked</li>
+        </li>
+        <li>Linked</li>
         </ul>
-      </ul>
+    </ul>
     </div>
-  );
+);
 };
 
 export default Portfolio;

@@ -1,14 +1,46 @@
-/* portfolio.scss */
+:root {
+    --text-color: #2e1f1f;
+    --background-color: #d2d2d2;
+    --accent-color: #394f5a;
+}
+
+body {
+    margin: 0;
+}
+
+.row-one {
+    display: flex;
+}
 
 .portfolio-container {
     max-width: 80%;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
-    background-color: #ecf0f1;
+    background-color: var(--background-color);
     font-family: 'Arial', sans-serif;
+    color: var(--text-color);
+    border: 2px solid var(--accent-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
 
     .webbio {
         margin-bottom: 20px;
+        text-align: center;
+
+        h2 {
+            color: var(--accent-color);
+            font-family: 'Caveat', cursive;
+            font-size: 36px;
+            margin: 0;
+        }
+
+        p {
+            margin-bottom: 0;
+            line-height: 1.5;
+            font-size: 18px;
+            color: var(--text-color);
+        }
     }
 
     ul {
@@ -16,12 +48,18 @@
         padding: 0;
 
         h3 {
-            font-size: 18px;
+            font-size: 24px;
             margin-bottom: 10px;
+            color: var(--accent-color);
         }
 
         li {
             margin-bottom: 8px;
         }
+    }
+
+    @media only screen and (max-width: 768px) {
+        max-width: 100%;
+        /* Set to 100% on smaller screens */
     }
 }

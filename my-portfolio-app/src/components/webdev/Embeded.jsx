@@ -1,6 +1,6 @@
 
 import VideoPlayer from './VideoPlayer';
-import './embeded.scss'; // Make sure to adjust the path based on your project structure
+import './embeded.scss'; 
 
 const Embeded = () => {
   return (

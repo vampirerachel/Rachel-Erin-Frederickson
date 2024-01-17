@@ -66,7 +66,7 @@ const VideoPlayer = () => {
         height="360"
         frameBorder="0"
         allowFullScreen
-        allow="autoplay; encrypted-media"
+          allow="autoplay; encrypted-media"
       ></iframe>
     </div></div>
   );

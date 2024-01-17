@@ -1,14 +1,17 @@
-import Embeded from "../webdev/Embeded";
 
-
+import Portfolio from "../webdev/Portfolio";
+import Banner from "../Header/Banner";
+import "./webdev.scss"
 
 const WebDev = () => {
     return (
         <div>
-            <a href="/">Go Back</a>
-    <Embeded></Embeded>
-        </div>
-    )
-} 
+      <Banner></Banner>
+      <div className="webdev-container">
+      <a href="/">Go Back</a>
+      <Portfolio></Portfolio>
+    </div></div>
+  );
+};
 
-export default WebDev
+export default WebDev;
