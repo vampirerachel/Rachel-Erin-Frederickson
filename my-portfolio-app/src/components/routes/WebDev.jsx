@@ -1,17 +1,16 @@
-
+import Header from "../Header/Header";
+import Footer from "../footer/Footer";
 import Portfolio from "../webdev/Portfolio";
-import Banner from "../Header/Banner";
-import "./webdev.scss"
-
-const WebDev = () => {
-    return (
-        <div>
-      <Banner></Banner>
-      <div className="webdev-container">
-      <a href="/">Go Back</a>
-      <Portfolio></Portfolio>
-    </div></div>
+import VideoPlayer from "../webdev/VideoPlayer";
+const Home = () => {
+  return (
+    <div>
+          <Header></Header>
+          <Portfolio></Portfolio>
+<VideoPlayer></VideoPlayer>
+      <Footer></Footer>
+    </div>
   );
 };
 
-export default WebDev;
+export default Home;

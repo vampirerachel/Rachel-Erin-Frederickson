@@ -9,10 +9,10 @@
     box-sizing: border-box;
 }
 
-.tecstack-container body {
+.tecstack-container {
     --color: rgba(30, 30, 30);
-    --bgColor: rgba(245, 245, 245);
-    min-height: 100vh;
+
+    min-height: 80vh;
 
     display: grid;
     align-content: center;
