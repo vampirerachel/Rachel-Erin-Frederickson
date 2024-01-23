@@ -32,6 +32,7 @@ $nav-text-color: #070707;
     height: 15vh;
     width: 100%;
     transition: opacity 0.5s ease-in-out;
+    z-index: 1;
 }
 
 .layered-box {

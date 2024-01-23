@@ -6,6 +6,7 @@ import "./toggle.scss"
 const Toggle = ({ toggleLanguage, langLabel, isActive }) => {
   const [displayedLabel, setDisplayedLabel] = useState(langLabel);
 
+  
   const handleClick = () => {
     toggleLanguage();
     setDisplayedLabel(langLabel === 'English' ? 'Español' : 'English');

@@ -51,6 +51,7 @@ body {
             font-size: 24px;
             margin-bottom: 10px;
             color: var(--accent-color);
+            text-align: center;
         }
 
         li {
@@ -60,6 +61,6 @@ body {
 
     @media only screen and (max-width: 768px) {
         max-width: 100%;
-        /* Set to 100% on smaller screens */
+        margin-top: 100px;
     }
 }

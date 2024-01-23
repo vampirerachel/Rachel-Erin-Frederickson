@@ -1,0 +1,132 @@
+.cbox-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 90%;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cbox-layered-cbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.cbox-layered-cbox:hover .cbox-third-layer {
+  background-color: var(--cbox-third-color);
+  /* ... other styles ... */
+}
+
+.cbox-layered-cbox:hover .cbox-fourth-layer {
+  background-color: var(--cbox-fourth-color);
+  /* ... other styles ... */
+}
+
+.cbox-layered-cbox:hover .cbox-fifth-layer {
+  background-color: var(--cbox-fifth-color);
+  /* ... other styles ... */
+}
+
+.cbox-layered-cbox:hover .cbox-sixth-layer {
+  background-color: var(--cbox-sixth-color);
+  /* ... other styles ... */
+}
+
+.cbox-layered-cbox:hover .cbox-seventh-layer {
+  background-color: var(--cbox-seventh-color);
+  /* ... other styles ... */
+}
+
+.cbox-layered-cbox:hover .cbox-eighth-layer {
+  background-color: var(--cbox-eighth-color);
+  /* ... other styles ... */
+}
+
+.cbox-layered-cbox:hover .cbox-ninth-layer {
+  background-color: var(--cbox-ninth-color);
+  /* ... other styles ... */
+}
+
+.cbox-layered-cbox:hover .cbox-tenth-layer {
+  background-color: var(--cbox-tenth-color);
+  /* ... other styles ... */
+}
+
+.cbox-layered-cbox:hover .cbox-base-layer {
+  background-color: var(--cbox-hover-color);
+}
+
+.cbox-base-layer {
+  background-color: var(--cbox-base-color);
+  /* ... other styles ... */
+}
+
+.cbox-top-layer {
+  background-color: var(--cbox-hover-color);
+  /* ... other styles ... */
+}
+
+.cbox-third-layer {
+  background-color: var(--cbox-third-color);
+  /* ... other styles ... */
+}
+
+.cbox-fourth-layer {
+  background-color: var(--cbox-fourth-color);
+  /* ... other styles ... */
+}
+
+.cbox-fifth-layer {
+  background-color: var(--cbox-fifth-color);
+  /* ... other styles ... */
+}
+
+.cbox-sixth-layer {
+  background-color: var(--cbox-sixth-color);
+  /* ... other styles ... */
+}
+
+.cbox-seventh-layer {
+  background-color: var(--cbox-seventh-color);
+  /* ... other styles ... */
+}
+
+.cbox-eighth-layer {
+  background-color: var(--cbox-eighth-color);
+  /* ... other styles ... */
+}
+
+.cbox-ninth-layer {
+  background-color: var(--cbox-ninth-color);
+  /* ... other styles ... */
+}
+
+.cbox-tenth-layer {
+  background-color: var(--cbox-tenth-color);
+  /* ... other styles ... */
+}
+
+.cbox-content-box {
+  /* ... other styles ... */
+}
+.cbox-content-box:hover {
+  color: red;
+  background-color: var(--cbox-hover-color);
+  /* ... other styles ... */
+}
+.cbox-content-box:active {
+  /* ... other styles ... */
+}
+
+@media screen and (min-width: 768px) {
+  .cbox-container {
+    margin-top: 250px;
+  }
+}/*# sourceMappingURL=colorbox.css.map */

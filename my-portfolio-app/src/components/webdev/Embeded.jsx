@@ -1,16 +1,21 @@
-
 import VideoPlayer from './VideoPlayer';
+import ColorPicker from './ColorPicker';
 import './embeded.scss'; 
 
+
 const Embeded = () => {
+
+
   return (
     <div className="embeded-container">
-      <h3>Check out these simple JavaScript algorithms Ive coded</h3>
+      <h3>JavaScript</h3>
       <ul>
         <li>
           <VideoPlayer />
         </li>
-        <li>Color Picker</li>
+        <li>
+          <ColorPicker />
+        </li>
       </ul>
     </div>
   );

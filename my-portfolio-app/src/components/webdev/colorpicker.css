@@ -1,0 +1,15 @@
+.widget {
+  text-align: center;
+}
+
+.pickerbg {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 19px;
+}
+
+.change-color {
+  padding: 8px 12px;
+  font-size: 20px;
+  cursor: pointer;
+}/*# sourceMappingURL=colorpicker.css.map */
