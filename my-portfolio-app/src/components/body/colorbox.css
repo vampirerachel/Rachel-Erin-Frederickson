@@ -1,132 +1,59 @@
-.cbox-container {
+.box-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 300px;
   width: 90%;
-  margin-top: 60px;
+  margin-top: 150px;
   margin-bottom: 60px;
   margin-left: auto;
   margin-right: auto;
 }
-
-.cbox-layered-cbox {
+.box-container .box-layered-box {
   position: relative;
   width: 100%;
   height: 100%;
   margin-bottom: 10px;
+  background-color: #e7c9c9;
+  transition: all 0.3s ease;
+  z-index: 0;
+}
+.box-container .box-layered-box:hover {
+  background-color: #ad9384;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.box-container .box-layered-box:active {
+  transform: scale(0.9);
+}
+.box-container .box-layered-box .box-content-box {
+  color: black;
+  font-family: "Gluten", cursive;
+  font-size: 0.9em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90%;
 }
-
-.cbox-layered-cbox:hover .cbox-third-layer {
-  background-color: var(--cbox-third-color);
-  /* ... other styles ... */
+.box-container .change-color {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #b59797;
+  color: #070707;
+  border: none;
+  cursor: pointer;
 }
-
-.cbox-layered-cbox:hover .cbox-fourth-layer {
-  background-color: var(--cbox-fourth-color);
-  /* ... other styles ... */
+.box-container .change-color:hover {
+  background-color: #ad9384;
 }
-
-.cbox-layered-cbox:hover .cbox-fifth-layer {
-  background-color: var(--cbox-fifth-color);
-  /* ... other styles ... */
-}
-
-.cbox-layered-cbox:hover .cbox-sixth-layer {
-  background-color: var(--cbox-sixth-color);
-  /* ... other styles ... */
-}
-
-.cbox-layered-cbox:hover .cbox-seventh-layer {
-  background-color: var(--cbox-seventh-color);
-  /* ... other styles ... */
-}
-
-.cbox-layered-cbox:hover .cbox-eighth-layer {
-  background-color: var(--cbox-eighth-color);
-  /* ... other styles ... */
-}
-
-.cbox-layered-cbox:hover .cbox-ninth-layer {
-  background-color: var(--cbox-ninth-color);
-  /* ... other styles ... */
-}
-
-.cbox-layered-cbox:hover .cbox-tenth-layer {
-  background-color: var(--cbox-tenth-color);
-  /* ... other styles ... */
-}
-
-.cbox-layered-cbox:hover .cbox-base-layer {
-  background-color: var(--cbox-hover-color);
-}
-
-.cbox-base-layer {
-  background-color: var(--cbox-base-color);
-  /* ... other styles ... */
-}
-
-.cbox-top-layer {
-  background-color: var(--cbox-hover-color);
-  /* ... other styles ... */
-}
-
-.cbox-third-layer {
-  background-color: var(--cbox-third-color);
-  /* ... other styles ... */
-}
-
-.cbox-fourth-layer {
-  background-color: var(--cbox-fourth-color);
-  /* ... other styles ... */
-}
-
-.cbox-fifth-layer {
-  background-color: var(--cbox-fifth-color);
-  /* ... other styles ... */
-}
-
-.cbox-sixth-layer {
-  background-color: var(--cbox-sixth-color);
-  /* ... other styles ... */
-}
-
-.cbox-seventh-layer {
-  background-color: var(--cbox-seventh-color);
-  /* ... other styles ... */
-}
-
-.cbox-eighth-layer {
-  background-color: var(--cbox-eighth-color);
-  /* ... other styles ... */
-}
-
-.cbox-ninth-layer {
-  background-color: var(--cbox-ninth-color);
-  /* ... other styles ... */
-}
-
-.cbox-tenth-layer {
-  background-color: var(--cbox-tenth-color);
-  /* ... other styles ... */
-}
-
-.cbox-content-box {
-  /* ... other styles ... */
-}
-.cbox-content-box:hover {
-  color: red;
-  background-color: var(--cbox-hover-color);
-  /* ... other styles ... */
-}
-.cbox-content-box:active {
-  /* ... other styles ... */
-}
-
 @media screen and (min-width: 768px) {
-  .cbox-container {
+  .box-container .box-container {
     margin-top: 250px;
   }
 }/*# sourceMappingURL=colorbox.css.map */
