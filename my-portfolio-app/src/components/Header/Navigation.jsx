@@ -42,7 +42,7 @@ const Navigation = () => {
       </div>
       <nav className={`navigation ${isMenuOpen ? 'open' : ''}`}>
         <ul>
-          <li><a href="#">{t('nav.home')}</a></li>
+          <li><a href="/">{t('nav.home')}</a></li>
           <li><a href="#">{t('nav.about')}</a></li>
           <li><a href="#">{t('nav.contact')}</a></li>
           <li className={`has-submenu ${isSubMenuOpen ? 'open' : ''}`} onClick={toggleSubMenu}>

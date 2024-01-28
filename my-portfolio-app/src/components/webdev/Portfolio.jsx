@@ -1,8 +1,12 @@
 // Portfolio.jsx
 import Tecstack from '../buttons/tecstack';
 import Embeded from './Embeded';
+import ProjectCard from './ProjectCard';
 import './portfolio.scss';
-
+import calorieImage from "../../images/caloriecounter.jpg"
+import searchImage from "../../images/imagesearch.jpg"
+import phonebook from "../../images/phonebook.jpg"
+import webstudio from "../../images/webstudio.jpg"
 const Portfolio = () => {
     return (
         <div className="portfolio-container">
@@ -19,7 +23,15 @@ const Portfolio = () => {
                 </div>
     <ul>
         <h3>Projects</h3>
-        <ul>
+                <ul>
+                    <li>
+                        <ProjectCard
+              name="Example Project"
+              description="A short description of the project."
+              link="https://vampirerachel.github.io/WebStudio/"
+              thumbnail={webstudio}
+            />
+                    </li>
         <li>
             <Embeded />
         </li>

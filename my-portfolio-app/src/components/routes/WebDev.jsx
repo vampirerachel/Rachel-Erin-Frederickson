@@ -2,7 +2,7 @@ import Header from "../Header/Header";
 import Footer from "../footer/Footer";
 import Portfolio from "../webdev/Portfolio";
 
-const Home = () => {
+const Webdev = () => {
   return (
     <div>
           <Header></Header>
@@ -12,4 +12,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Webdev;
