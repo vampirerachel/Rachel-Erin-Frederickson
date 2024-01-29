@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-
+import "./projectCard.scss"
 const ProjectCard = ({ name, description, link, thumbnail }) => {
   return (
     <div className="project-card">
@@ -8,7 +8,7 @@ const ProjectCard = ({ name, description, link, thumbnail }) => {
       <a href={link} target="_blank" rel="noopener noreferrer">
         View Project
       </a>
-      <img src={thumbnail} alt={`${name} Thumbnail`} />
+      <img className="thumbnail"src={thumbnail} alt={`${name} Thumbnail`} />
     </div>
   );
 };

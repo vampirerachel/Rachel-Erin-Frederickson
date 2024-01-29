@@ -4,6 +4,8 @@ import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { useTranslation } from 'react-i18next';
+import { useContext } from 'react';
+import { BannerContext } from './BannerContext';
 
 
 import './navigation.scss';
@@ -13,7 +15,9 @@ const Navigation = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [activeLanguage, setActiveLanguage] = useState('en');
   const [isSubMenuOpen, setSubMenuOpen] = useState(false);
+   const { updateBannerColors } = useContext(BannerContext);
 
+  
   const toggleMenuHandler = () => {
     setMenuOpen(!isMenuOpen);
     setSubMenuOpen(false); // Close submenu when toggling the main menu
@@ -33,6 +37,29 @@ const Navigation = () => {
     setSubMenuOpen(true);
   };
 
+  const handleClick = () => {
+    const newColors = {
+      base: getRandomColor(),
+      second: getRandomColor(),
+      third: getRandomColor(),
+      fourth: getRandomColor(),
+      fifth: getRandomColor(),
+      sixth: getRandomColor(),
+      seventh: getRandomColor(),
+      eighth: getRandomColor(),
+      ninth: getRandomColor(),
+      tenth: getRandomColor(),
+      hover: getRandomColor(),
+      navBackground: getRandomColor(),
+      navText: getRandomColor(),
+    };
+
+    updateBannerColors(newColors);
+  };
+
+  const getRandomColor = () => {
+    return '#' + Math.floor(Math.random() * 16777215).toString(16);
+  };
   return (
     <div className={`navigation-container ${isMenuOpen ? 'menu-open' : ''}`}>
       <div className="menu-icon-container" onClick={toggleMenuHandler}>
@@ -63,6 +90,11 @@ const Navigation = () => {
       <div className="lang">
         <Toggle toggleLanguage={toggleLanguage} langLabel={activeLanguage === 'en' ? 'Español' : 'English'} />
       </div>
+      <div>
+      <button type="button" className="change-color" onClick={handleClick}>
+        Change color
+      </button>
+    </div>
     </div>
   );
 };
