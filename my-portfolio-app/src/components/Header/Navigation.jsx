@@ -15,7 +15,7 @@ const Navigation = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [activeLanguage, setActiveLanguage] = useState('en');
   const [isSubMenuOpen, setSubMenuOpen] = useState(false);
-   const { updateBannerColors } = useContext(BannerContext);
+  const { updateBannerColors } = useContext(BannerContext);
 
   
   const toggleMenuHandler = () => {
@@ -36,6 +36,7 @@ const Navigation = () => {
   const openSubMenu = () => {
     setSubMenuOpen(true);
   };
+ 
 
   const handleClick = () => {
     const newColors = {
@@ -45,10 +46,10 @@ const Navigation = () => {
       fourth: getRandomColor(),
       fifth: getRandomColor(),
       sixth: getRandomColor(),
-      seventh: getRandomColor(),
-      eighth: getRandomColor(),
-      ninth: getRandomColor(),
-      tenth: getRandomColor(),
+      seventh: getRandomLightColor(),
+      eighth: getRandomLightColor(),
+      ninth: getRandomLightColor(),
+      tenth: getRandomLightColor(),
       hover: getRandomColor(),
       navBackground: getRandomColor(),
       navText: getRandomColor(),
@@ -56,7 +57,19 @@ const Navigation = () => {
 
     updateBannerColors(newColors);
   };
+const getRandomLightColor = () => {
+    const minComponentValue = 150; 
 
+    const randomComponent = () => Math.floor(Math.random() * (255 - minComponentValue) + minComponentValue);
+
+    const red = randomComponent().toString(16);
+    const green = randomComponent().toString(16);
+    const blue = randomComponent().toString(16);
+
+    return `#${red}${green}${blue}`;
+};
+
+console.log(getRandomLightColor());
   const getRandomColor = () => {
     return '#' + Math.floor(Math.random() * 16777215).toString(16);
   };
@@ -94,7 +107,7 @@ const Navigation = () => {
       <button type="button" className="change-color" onClick={handleClick}>
         Change color
       </button>
-    </div>
+      </div>
     </div>
   );
 };

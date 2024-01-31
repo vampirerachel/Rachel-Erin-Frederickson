@@ -1,16 +1,6 @@
-@keyframes collapseToTop {
-  from {
-    top: 0;
-  }
-  to {
-    top: -30vh;
-  }
-}
 .header-container {
   position: fixed;
-  /* Fixed position */
   top: 0;
-  /* Stick to the top of the viewport */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,7 +18,7 @@
 }
 
 .layered-box:hover .third-layer {
-  background-color: #394f5a;
+  background-color: #666666;
   width: 96%;
   height: 80%;
   position: absolute;
@@ -37,7 +27,7 @@
   z-index: -9;
 }
 .layered-box:hover .fourth-layer {
-  background-color: #e1dcdc;
+  background-color: #e6e6e6;
   width: 94%;
   height: 70%;
   position: absolute;
@@ -46,7 +36,7 @@
   z-index: -8;
 }
 .layered-box:hover .fifth-layer {
-  background-color: #d2d2d2;
+  background-color: #cccccc;
   width: 92%;
   height: 60%;
   position: absolute;
@@ -55,7 +45,7 @@
   z-index: -7;
 }
 .layered-box:hover .sixth-layer {
-  background-color: #e7c9c9;
+  background-color: #e0e0e0;
   width: 90%;
   height: 50%;
   position: absolute;
@@ -64,7 +54,7 @@
   z-index: -6;
 }
 .layered-box:hover .seventh-layer {
-  background-color: #9e7f7f;
+  background-color: #999999;
   width: 88%;
   height: 40%;
   position: absolute;
@@ -73,7 +63,7 @@
   z-index: -5;
 }
 .layered-box:hover .eighth-layer {
-  background-color: #b9a099;
+  background-color: #b3b3b3;
   width: 86%;
   height: 30%;
   position: absolute;
@@ -82,7 +72,7 @@
   z-index: -4;
 }
 .layered-box:hover .ninth-layer {
-  background-color: #c5c1c1;
+  background-color: #c1c1c1;
   width: 84%;
   height: 20%;
   position: absolute;
@@ -91,7 +81,7 @@
   z-index: -3;
 }
 .layered-box:hover .tenth-layer {
-  background-color: #706b6b;
+  background-color: #999999;
   width: 82%;
   height: 10%;
   position: absolute;
@@ -100,11 +90,11 @@
   z-index: -2;
 }
 .layered-box:hover .base-layer {
-  background-color: #39404a;
+  background-color: #666666;
 }
 
 .base-layer {
-  background-color: #2e1f1f;
+  background-color: #333333;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -113,7 +103,7 @@
 }
 
 .top-layer {
-  background-color: #39404a;
+  background-color: #666666;
   width: 98%;
   height: 90%;
   position: absolute;
@@ -124,7 +114,7 @@
 }
 
 .third-layer {
-  background-color: #706b6b;
+  background-color: #999999;
   width: 96%;
   height: 80%;
   position: absolute;
@@ -134,7 +124,7 @@
 }
 
 .fourth-layer {
-  background-color: #394f5a;
+  background-color: #666666;
   width: 94%;
   height: 70%;
   position: absolute;
@@ -144,7 +134,7 @@
 }
 
 .fifth-layer {
-  background-color: #e1dcdc;
+  background-color: #e6e6e6;
   width: 92%;
   height: 60%;
   position: absolute;
@@ -154,7 +144,7 @@
 }
 
 .sixth-layer {
-  background-color: #d2d2d2;
+  background-color: #cccccc;
   width: 90%;
   height: 50%;
   position: absolute;
@@ -164,7 +154,7 @@
 }
 
 .seventh-layer {
-  background-color: #e7c9c9;
+  background-color: #e0e0e0;
   width: 88%;
   height: 40%;
   position: absolute;
@@ -174,7 +164,7 @@
 }
 
 .eighth-layer {
-  background-color: #9e7f7f;
+  background-color: #999999;
   width: 86%;
   height: 30%;
   position: absolute;
@@ -184,7 +174,7 @@
 }
 
 .ninth-layer {
-  background-color: #b9a099;
+  background-color: #b3b3b3;
   width: 84%;
   height: 20%;
   position: absolute;
@@ -194,7 +184,7 @@
 }
 
 .tenth-layer {
-  background-color: #c5c1c1;
+  background-color: #c1c1c1;
   width: 82%;
   height: 10%;
   position: absolute;
@@ -208,7 +198,7 @@
   font-family: "Gluten", cursive;
   font-size: 1.5em;
   position: absolute;
-  top: 50%;
+  top: 52%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 11;
@@ -217,10 +207,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.content-box:hover {
-  color: red;
-  background-color: #4caf50;
 }
 
 @media screen and (min-width: 768px) {

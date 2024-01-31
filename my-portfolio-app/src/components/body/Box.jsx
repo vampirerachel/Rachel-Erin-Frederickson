@@ -23,7 +23,7 @@ const Box = () => {
 
       <div className="box-layered-box"  onClick={handleBox1Click}>
 <div className="box-base-layer" style={{ backgroundColor: bannerColors.base }}></div>
-        <div className="box-top-layer" style={{ backgroundColor: bannerColors.top }}></div>
+        <div className="box-second-layer" style={{ backgroundColor: bannerColors.second }}></div>
         <div className="box-third-layer" style={{ backgroundColor: bannerColors.third }}></div>
         <div className="box-fourth-layer"style={{ backgroundColor: bannerColors.fourth }}></div>
         <div className="box-fifth-layer"style={{ backgroundColor: bannerColors.fifth }}></div>
@@ -32,11 +32,11 @@ const Box = () => {
         <div className="box-eighth-layer"style={{ backgroundColor: bannerColors.eighth }}></div>
         <div className="box-ninth-layer"style={{ backgroundColor: bannerColors.ninth }}></div>
         <div className="box-tenth-layer"style={{ backgroundColor: bannerColors.tenth}}></div>
-        <div className="box-content-box" style={{ backgroundColor: bannerColors.hover }}><a>{t('box.1')}</a></div>
+        <div className="box-content-box" ><a>{t('box.1')}</a></div>
       </div>
       <div className="box-layered-box"  onClick={handleBox2Click}>
-<div className="box-base-layer" style={{ backgroundColor: bannerColors.base }}></div>
-        <div className="box-top-layer" style={{ backgroundColor: bannerColors.hover }}></div>
+      <div className="box-base-layer" style={{ backgroundColor: bannerColors.base }}></div>
+        <div className="box-second-layer" style={{ backgroundColor: bannerColors.second }}></div>
         <div className="box-third-layer" style={{ backgroundColor: bannerColors.third }}></div>
         <div className="box-fourth-layer"style={{ backgroundColor: bannerColors.fourth }}></div>
         <div className="box-fifth-layer"style={{ backgroundColor: bannerColors.fifth }}></div>
@@ -45,7 +45,7 @@ const Box = () => {
         <div className="box-eighth-layer"style={{ backgroundColor: bannerColors.eighth }}></div>
         <div className="box-ninth-layer"style={{ backgroundColor: bannerColors.ninth }}></div>
         <div className="box-tenth-layer"style={{ backgroundColor: bannerColors.tenth}}></div>
-        <div className="box-content-box" style={{ backgroundColor: bannerColors.hover }}><p>{t('box.2')}</p></div>
+        <div className="box-content-box"><p>{t('box.2')}</p></div>
       </div>
     </div>
 

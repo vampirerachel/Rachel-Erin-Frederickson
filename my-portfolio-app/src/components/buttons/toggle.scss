@@ -1,9 +1,8 @@
-$primaryColor: #4caf50;
-$secondaryColor: #45a049;
-$nav-text-color:#39404a;; // Light Dusty Rose
-$hover-color: #9e7f7f;
+$background-color: white;
+$nav-text-color: #39404a;
+$hover-color: #000000;
+$press-color: #808080; // Adjust the color for the pressed state
 
-// toggle.scss
 .language-toggle {
     position: relative;
     border: none;
@@ -12,29 +11,24 @@ $hover-color: #9e7f7f;
     cursor: pointer;
     outline: none;
     transition: background-color 0.3s, color 0.3s;
+    background-color: $background-color;
+    color: $nav-text-color;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
 
-    &.active {
-        background-color: transparent;
-        color: black;
-        border: 2px solid grey;
-        border-radius: 20px;
-        pointer-events: none;
+    &:hover {
+        background-color: $hover-color;
+        color: $background-color;
     }
 
-    &:not(.active) {
-        background-color: rgba(255, 255, 255, 0.5);
-        color: $nav-text-color; // Use the root color for menu text
-        border-radius: 50%;
-        width: 40px; // Adjust the width of the circle
-        height: 40px; // Adjust the height of the circle
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 10px;
-    }
-
-    &:hover:not(.active) {
-        background-color: $hover-color; // Use the root color for hover effect
-        color: $nav-text-color; // Use the root color for menu text
+    &:active {
+        background-color: $press-color;
+        color: $background-color;
+        transform: scale(0.9);
     }
 }

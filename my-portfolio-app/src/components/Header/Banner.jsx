@@ -8,16 +8,13 @@ import './banner.scss';
 const Banner = () => {
   const { t } = useTranslation();
   
-   const { isBannerVisible, toggleBanner,bannerColors } = useContext(BannerContext);
-
-
-
+  const {bannerColors } = useContext(BannerContext); 
   return (
     <div>
-      <header className={`header-container ${isBannerVisible ? 'visible' : 'hidden'}`}>
+      <header className='header-container'>
         <div className="layered-box">
           <div className="base-layer" style={{ backgroundColor: bannerColors.base }}></div>
-          <div className="top-layer" style={{ backgroundColor: bannerColors.top }}></div>
+          <div className="second-layer" style={{ backgroundColor: bannerColors.second }}></div>
           <div className="third-layer" style={{ backgroundColor: bannerColors.third }}></div>
           <div className="fourth-layer" style={{ backgroundColor: bannerColors.fourth }}></div>
           <div className="fifth-layer" style={{ backgroundColor: bannerColors.fifth }}></div>
@@ -31,7 +28,6 @@ const Banner = () => {
           </div>
         </div>
       </header>
-      <button onClick={toggleBanner} className={`toggle-banner-button ${isBannerVisible ? '' : 'up'}`}></button>
     </div>
   );
 };

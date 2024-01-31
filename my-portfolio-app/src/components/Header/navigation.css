@@ -1,14 +1,7 @@
-:root {
-  --nav-text-color: #e7c9c9;
-  --hover-color: #9e7f7f;
-  --nav-background-color: #b59797;
-  --nav-submenu-background: rgb(232, 166, 166);
-}
-
 .lang {
   display: flex;
   position: fixed;
-  top: 28px;
+  top: 45px;
   right: 0;
   z-index: 1;
 }
@@ -27,10 +20,10 @@
 .menu-icon {
   position: relative;
   font-size: 32px;
-  color: var(--nav-text-color);
+  color: #39404a;
   padding: 10px;
   transition: font-size 0.3s, color 0.3s;
-  background-color: var(--nav-background-color);
+  background-color: #b59797;
   border-radius: 50%;
   width: 30px;
   height: 30px;
@@ -38,15 +31,15 @@
   align-items: center;
   justify-content: center;
   margin: 10px;
-  margin-top: 28px;
+  margin-top: 1px;
   margin-left: auto;
 }
 .menu-icon:hover {
   font-size: 36px;
-  color: var(--hover-color);
+  color: #9e7f7f;
 }
 .menu-icon.open {
-  color: var(--hover-color);
+  color: #9e7f7f;
 }
 
 .navigation {
@@ -82,7 +75,7 @@
   display: block;
 }
 .navigation ul li:hover a {
-  background: var(--hover-color);
+  background: #9e7f7f;
   color: white;
 }
 .navigation ul li a {
@@ -95,16 +88,16 @@
   border-radius: 8px;
   position: relative;
   overflow: hidden;
-  background: var(--nav-submenu-background);
+  background: rgb(232, 166, 166);
   transition: background 0.3s linear, color 0.3s linear;
 }
 .navigation ul li a:hover {
-  background: var(--hover-color);
+  background: #000000;
   color: white;
 }
 .navigation ul li .submenu {
   display: none;
-  background-color: var(--nav-submenu-background);
+  background-color: rgb(232, 166, 166);
   border-radius: 0.3rem;
   box-shadow: 0 0 3px #000;
 }
@@ -119,7 +112,7 @@
   transition: background 0.3s linear, color 0.3s linear;
 }
 .navigation ul li .submenu li a:hover {
-  background: #333;
+  background: #39404a;
 }
 .navigation ul li.has-submenu.open .submenu {
   display: block;
@@ -133,6 +126,35 @@
 }
 .has-submenu.open .submenu {
   display: block;
+}
+
+.change-color {
+  background-color: rgb(255, 255, 255);
+  color: #39404a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1px;
+  position: fixed;
+  top: 5px;
+  right: 0;
+  z-index: 1;
+  border: none;
+  padding: 5px;
+  font-size: 10px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+.change-color:hover {
+  background-color: #000000;
+  color: white;
+}
+.change-color:active {
+  background-color: #808080;
+  color: white;
+  transform: scale(0.9);
 }
 
 @media only screen and (min-width: 768px) {

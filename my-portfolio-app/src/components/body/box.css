@@ -129,8 +129,8 @@
   /* Added transition on transform */
 }
 
-.box-top-layer {
-  background-color: #ad9384;
+.box-second-layer {
+  background-color: #39404a;
   width: 98%;
   height: 90%;
   position: absolute;
@@ -255,7 +255,6 @@
   /* Adding smooth transition */
 }
 .box-content-box:hover {
-  color: red;
   background-color: #ad9384;
   cursor: pointer;
   transform: scale(1.1);

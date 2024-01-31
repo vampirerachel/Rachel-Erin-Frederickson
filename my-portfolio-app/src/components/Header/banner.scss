@@ -1,30 +1,19 @@
-$base-color: #2e1f1f;
-$second-color: #39404a;
-$third-color: #706b6b;
-$fourth-color: #394f5a;
-$fifth-color: #e1dcdc; // Light Beige
-$sixth-color: #d2d2d2; // Light Grey
-$seventh-color: #e7c9c9; // Light Dusty Rose
-$eighth-color: #9e7f7f; // Darker Brownish Maroon
-$ninth-color: #b9a099; // Dark Beige
-$tenth-color: #c5c1c1; // Light Grey
-$hover-color: #ad9384; // Light Dark Beige
-$nav-background-color: #b59797; // Light Dusty Rose
-$nav-text-color: #070707;
-@keyframes collapseToTop {
-    from {
-        top: 0;
-    }
+$base-color: #333333; // Dark Gray
+$second-color: #666666; // Medium Gray
+$third-color: #999999; // Light Gray
+$fourth-color: #666666; // Medium Gray
+$fifth-color: #e6e6e6; // Light Gray
+$sixth-color: #cccccc; // Silver Gray
+$seventh-color: #e0e0e0; // Light Silver
+$eighth-color: #999999; // Light Gray
+$ninth-color: #b3b3b3; // Medium Silver
+$tenth-color: #c1c1c1; // Light Silver
+$content-color: #8a8a8a; // Dark Silver
+$nav-background-color: #a08c8c; // Light Dusty Rose
 
-    to {
-        top: -30vh; // Adjust based on your design
-    }
-}
 .header-container {
     position: fixed;
-    /* Fixed position */
     top: 0;
-    /* Stick to the top of the viewport */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -110,7 +99,7 @@ transition: opacity 0.5s ease-in-out;
     z-index: -10;transition: opacity 0.5s ease-in-out;
 }
 
-// Define a mixin to generate the layers
+
 @mixin layer($color, $width, $height, $top, $left, $z-index) {
     background-color: $color;
     width: $width;
@@ -121,7 +110,7 @@ transition: opacity 0.5s ease-in-out;
     z-index: $z-index;
 }
 
-// Use the mixin to generate additional layers
+
 .third-layer {
     @include layer($third-color, 96%, 80%, 10%, 2%, -9);
 }
@@ -159,20 +148,16 @@ transition: opacity 0.5s ease-in-out;
     font-family: 'Gluten', cursive;
     font-size: 1.5em;
     position: absolute;
-    top: 50%;
+    top: 52%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 11;
     width: 100%;
-    text-align: center; // Center the text horizontally
+    text-align: center; 
     display: flex;
     flex-direction: column;
-    align-items: center; // Center the text vertically
+    align-items: center; 
 
-    &:hover {
-        color: red;
-        background-color: #4caf50;
-    }
 }
 
 @media screen and (min-width: 768px) {

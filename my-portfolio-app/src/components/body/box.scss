@@ -8,7 +8,7 @@ $box-seventh-color: #e7c9c9;
 $box-eighth-color: #e1dcdc;
 $box-ninth-color: #d2d2d2;
 $box-tenth-color: #c5c1c1;
-$box-hover-color: #ad9384;
+$box-content-color: #ad9384;
 $box-nav-background-color: #b59797;
 $box-nav-text-color: #070707;
 
@@ -130,7 +130,7 @@ $box-nav-text-color: #070707;
 }
 
 .box-layered-box:hover .box-base-layer {
-    background-color: $box-hover-color;
+    background-color: $box-content-color;
 }
 
 .box-base-layer {
@@ -143,8 +143,8 @@ $box-nav-text-color: #070707;
     /* Added transition on transform */
 }
 
-.box-top-layer {
-    background-color: $box-hover-color;
+.box-second-layer {
+    background-color: $box-second-color;
     width: 98%;
     height: 90%;
     position: absolute;
@@ -269,8 +269,7 @@ $box-nav-text-color: #070707;
     /* Adding smooth transition */
 
     &:hover {
-        color: red;
-        background-color: $box-hover-color;
+        background-color: $box-content-color;
         cursor: pointer;
         transform: scale(1.1);
         /* Adding scaling effect on hover */
