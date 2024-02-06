@@ -1,23 +1,43 @@
 // footer.scss
+
+$base-color: #333333; // Dark Gray
+$second-color: #666666; // Medium Gray
+$third-color: #999999; // Light Gray
+$fourth-color: #666666; // Medium Gray
+$fifth-color: #e6e6e6; // Light Gray
+$sixth-color: #cccccc; // Silver Gray
+$seventh-color: #e0e0e0; // Light Silver
+$eighth-color: #999999; // Light Gray
+$ninth-color: #b3b3b3; // Medium Silver
+$tenth-color: #c1c1c1; // Light Silver
+$content-color: #8a8a8a; // Dark Silver
+$nav-background-color: #a08c8c; // Light Dusty Rose
 .footer {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 30px;
-    background-color: #333;
-    padding: 10px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    z-index: 10;
+    z-index: 1;
+    p{
+        display: flex;
+        font-size: 20px;
+    }
 }
 
 .linkedin-link {
     a {
-        color: #fff;
+        background-color: white;
+        color: black;
         text-decoration: none;
-        font-size: 24px;
+        border-radius: 50%;
+        font-size: 15px;
+        display: flex;
+        margin-left:30px;
+        padding: 3px;
+        margin-bottom:3px;
     }
 }
 
@@ -26,13 +46,95 @@
     color: #fff;
     border: none;
     border-radius: 50%;
-    padding: 10px;
+    padding: 5px;
+    margin-right: 20px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 10px;
     outline: none;
     transition: background-color 0.3s;
-margin-right: 40px;
+display: flex;
     &:hover {
         background-color: #333;
     }
+}
+.footer-layered-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.footer-base-layer {
+    background-color: $base-color;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -11;
+    transition: opacity 0.5s ease-in-out;
+}
+@mixin layer($color, $width, $height, $top, $left, $z-index) {
+    background-color: $color;
+    width: $width;
+    height: $height;
+    position: absolute;
+    top: $top;
+    left: $left;
+    z-index: $z-index;
+}
+
+
+.footer-third-layer {
+    @include layer($third-color, 96%, 80%, 10%, 2%, -9);
+}
+
+.footer-fourth-layer {
+    @include layer($fourth-color, 94%, 70%, 15%, 3%, -8);
+}
+
+.footer-fifth-layer {
+    @include layer($fifth-color, 92%, 60%, 20%, 4%, -7);
+}
+
+.footer-sixth-layer {
+    @include layer($sixth-color, 90%, 50%, 25%, 5%, -6);
+}
+
+.footer-seventh-layer {
+    @include layer($seventh-color, 88%, 40%, 30%, 6%, -5);
+}
+
+.footer-eighth-layer {
+    @include layer($eighth-color, 86%, 30%, 35%, 7%, -4);
+}
+
+.footer-ninth-layer {
+    @include layer($ninth-color, 84%, 20%, 40%, 8%, -3);
+}
+
+.footer-tenth-layer {
+    @include layer($tenth-color, 82%, 10%, 45%, 9%, -2);
+}
+.footer-top-layer {
+    background-color: $second-color;
+    width: 98%;
+    height: 90%;
+    position: absolute;
+    top: 5%;
+    left: 1%;
+    z-index: -10;
+    transition: opacity 0.5s ease-in-out;
+}
+.footer-content-box {
+    color: black;
+    font-family: 'Gluten', cursive;
+    font-size: .5em;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+justify-content: space-between;
 }

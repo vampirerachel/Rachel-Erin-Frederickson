@@ -11,14 +11,9 @@
 
 .tecstack-container {
     --color: rgba(30, 30, 30);
-
-    min-height: 80vh;
-
     display: grid;
-    align-content: center;
     gap: 2rem;
     padding: 2rem;
-
     font-family: "Jura", sans-serif;
     color: var(--color);
     background: var(--bgColor);
