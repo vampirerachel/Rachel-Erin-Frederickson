@@ -16,7 +16,6 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: './src/Main.jsx',
-        index: './index.html',
       },
       external: [
         '@fortawesome/react-fontawesome',
