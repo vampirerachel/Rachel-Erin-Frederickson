@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/',
+  base: '',
   plugins: [react()],
   css: {
     preprocessorOptions: {
@@ -15,7 +15,8 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: './src/Main.jsx', // Specify the correct path to your main entry file
+        main: './src/Main.jsx',
+        index: './index.html',
       },
       external: [
         '@fortawesome/react-fontawesome',
