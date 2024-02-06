@@ -1,7 +1,5 @@
 // Footer.jsx
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
+
 import { BannerContext } from '../header/BannerContext';
 import { useContext } from 'react';
 import './footer.scss';
@@ -29,12 +27,12 @@ const Footer = () => {
         <div className="footer-content-box">
           <div className="linkedin-link">
             <a href="YOUR_LINKEDIN_PROFILE_URL" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faLinkedin} />
+            <i className="fab fa-linkedin"></i>
             </a>
           </div>
             <p>Thanks for visiting</p>
                   <button className="scroll-top-button" onClick={scrollToTop} style={{ backgroundColor: bannerColors.navBackground, color: bannerColors.navText }}>
-        <FontAwesomeIcon icon={faArrowUp} />
+        <i className="fab fa-ArrowUp"></i>
       </button>
         </div>
         </div>
